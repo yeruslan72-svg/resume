@@ -1,217 +1,326 @@
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
-%
-%	Copyright (c) 2021 Jitin Nair
-%
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
-%
-%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% YERUSLAN CHIHACHYOV — CV
+% Decision Architect for High-Risk Operations
+% autoCV template — jitinnair1/autoCV
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt,a4paper]{article}
 
 %----------------------------------------------------------------------------------------
-%	DOCUMENT DEFINITION
+% PACKAGES
 %----------------------------------------------------------------------------------------
-
-% article class because we want to fully customize the page and not use a cv template
-\documentclass[a4paper,12pt]{article}
-
-%----------------------------------------------------------------------------------------
-%	FONT
-%----------------------------------------------------------------------------------------
-
-% % fontspec allows you to use TTF/OTF fonts directly
-% \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
-
-% % modified for ShareLaTeX use
-% \setmainfont[
-% SmallCapsFont = Fontin-SmallCaps.otf,
-% BoldFont = Fontin-Bold.otf,
-% ItalicFont = Fontin-Italic.otf
-% ]
-% {Fontin.otf}
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES
-%----------------------------------------------------------------------------------------
-\usepackage{url}
-\usepackage{parskip} 	
-
-%other packages for formatting
-\RequirePackage{color}
-\RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
-
-%tabularx environment
-\usepackage{tabularx}
-
-%for lists within experience section
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{titlesec}
 \usepackage{enumitem}
-
-% centered version of 'X' col. type
-\newcolumntype{C}{>{\centering\arraybackslash}X} 
-
-%to prevent spillover of tabular into next pages
-\usepackage{supertabular}
+\usepackage{hyperref}
+\usepackage{xcolor}
 \usepackage{tabularx}
-\newlength{\fullcollw}
-\setlength{\fullcollw}{0.47\textwidth}
-
-%custom \section
-\usepackage{titlesec}				
-\usepackage{multicol}
-\usepackage{multirow}
-
-%CV Sections inspired by: 
-%http://stefano.italians.nl/archives/26
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
-
-%for publications
-\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
-
-%Setup hyperref package, and colours for links
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
-\addbibresource{citations.bib}
-\setlength\bibitemsep{1em}
-
-%for social icons
+\usepackage{array}
 \usepackage{fontawesome5}
-
-%debug page outer frames
-%\usepackage{showframe}
-
-
-% job listing environments
-\newenvironment{jobshort}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    }
-    {
-    }
-
-\newenvironment{joblong}[2]
-    {
-    \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
-    \end{tabularx}
-    \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
-    \end{itemize}
-    \end{minipage}    
-    }
-
-
+\usepackage{parskip}
 
 %----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
+% COLORS
+%----------------------------------------------------------------------------------------
+\definecolor{avcsdark}{RGB}{30, 58, 138}
+\definecolor{avcsgold}{RGB}{212, 175, 55}
+\definecolor{avcsgray}{RGB}{75, 85, 99}
+\definecolor{avcslightgray}{RGB}{138, 138, 138}
+
+%----------------------------------------------------------------------------------------
+% HYPERREF
+%----------------------------------------------------------------------------------------
+\hypersetup{
+    colorlinks=true,
+    linkcolor=avcsdark,
+    urlcolor=avcsdark,
+    pdfauthor={Yeruslan Chihachyov},
+    pdftitle={CV — Yeruslan Chihachyov},
+}
+
+%----------------------------------------------------------------------------------------
+% SECTION STYLE
+%----------------------------------------------------------------------------------------
+\titleformat{\section}
+    {\Large\bfseries\color{avcsdark}}
+    {}{0em}{}
+    [\vspace{-0.5em}\color{avcsdark}\rule{\textwidth}{0.8pt}]
+
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+
+%----------------------------------------------------------------------------------------
+% CUSTOM COMMANDS
+%----------------------------------------------------------------------------------------
+\newcommand{\trajectory}[1]{%
+    \begin{center}
+        \small\bfseries\color{avcsdark}
+        #1
+    \end{center}
+    \vspace{-0.5em}
+}
+
+\newcommand{\company}[1]{%
+    \textbf{\color{avcsdark}#1}%
+}
+
+\newcommand{\role}[1]{%
+    \textit{#1}%
+}
+
+\newcommand{\period}[1]{%
+    \hfill\textbf{\color{avcsgray}#1}%
+}
+
+%----------------------------------------------------------------------------------------
+% DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
-% non-numbered pages
-\pagestyle{empty} 
+%----------------------------------------------------------------------------------------
+% HEADER
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\Huge\bfseries\color{avcsdark} YERUSLAN CHIHACHYOV} \\[6pt]
+    {\large\bfseries Decision Architect for High-Risk Operations} \\[4pt]
+    {\small Operational Reliability \textbar\ Decision Integrity \textbar\ FSO/FPSO \textbar\ Control Room Operations} \\[6pt]
+    {\small
+        \faMapMarker* \ Essentuki, Russia \quad
+        \faEnvelope \ \href{mailto:yeruslan72@gmail.com}{yeruslan72@gmail.com} \quad
+        \faPhone \ +7 (928) 007-73-74 \quad
+        \faLinkedin \ \href{https://linkedin.com/in/yeruslan-chihachyov-70a807126}{linkedin.com/in/yeruslan-chihachyov}
+    }
+\end{center}
+
+\vspace{0.5em}
 
 %----------------------------------------------------------------------------------------
-%	TITLE
+% PROFESSIONAL TRAJECTORY
 %----------------------------------------------------------------------------------------
+\section*{Professional Trajectory}
 
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
+\trajectory{MOTORMAN $\rightarrow$ SHIP MECHANICAL TECHNICIAN $\rightarrow$ OFFSHORE OPERATIONS $\rightarrow$ CCR / PRODUCTION OPERATOR $\rightarrow$ DECISION ARCHITECT}
 
-\begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL PROFILE
+%----------------------------------------------------------------------------------------
+\section*{Professional Profile}
+
+Operational professional and independent Decision Architect with \textbf{30+ years of progressive experience} across marine, offshore and production operations, including machinery operations, FSO/FPSO production and control-room environments.
+
+Career progression from \textbf{Motorman} and \textbf{Ship Mechanical Technician} to offshore \textbf{CCR/Production Operator} and, subsequently, \textbf{Decision Architect}.
+
+Experienced in operating within environments where decisions must be made under changing conditions, incomplete information, production pressure and time constraints.
+
+Since 2016, independently developing \textbf{AVCS (Adaptive Vector Control System)} — a proprietary framework for examining the structural integrity of operational decision systems.
+
+My work focuses on the gap between controls and procedures on paper and their effectiveness in actual operational conditions, including decision ownership, intervention authority, critical controls, escalation, overrides, operational drift and the ability to maintain control when conditions change.
+
+\vspace{0.5em}
+\textbf{Core principle:} \textit{Control is the ability to stop in time. If a system cannot be stopped, it is not under control.}
+
+%----------------------------------------------------------------------------------------
+% CORE COMPETENCIES
+%----------------------------------------------------------------------------------------
+\section*{Core Competencies}
+
+\begin{tabularx}{\textwidth}{@{}p{4.5cm}X@{}}
+\textbf{\color{avcsdark}Operations} &
+Offshore FSO/FPSO Operations \textbullet\ Production Operations \textbullet\ Marine Machinery \& Systems \textbullet\ Control Room Operations \textbullet\ Operational Reliability \textbullet\ Abnormal and Time-Critical Operations \\[4pt]
+\textbf{\color{avcsdark}Operational Risk \& Integrity} &
+Critical Controls and Safety Barriers \textbullet\ Operational Drift \textbullet\ Procedure vs. Actual Practice \textbullet\ Systemic Contributors to Operational Failure \textbullet\ Incident and Near-Miss Analysis \textbullet\ Pre-Incident Structural Weakness \\[4pt]
+\textbf{\color{avcsdark}Decision Architecture} &
+Decision Ownership \textbullet\ Authority Boundaries \textbullet\ Escalation Architecture \textbullet\ Protected Intervention \textbullet\ Override Visibility \textbullet\ Decision Traceability \\[4pt]
+\textbf{\color{avcsdark}Leadership \& Coordination} &
+Cross-Functional Operational Coordination \textbullet\ Communication Under Pressure \textbullet\ Control-Room Decision Support \textbullet\ Operational Problem Analysis \textbullet\ Senior Management Communication \textbullet\ Field-to-Management Translation \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
+% PROFESSIONAL EXPERIENCE
 %----------------------------------------------------------------------------------------
-
-%Interests/ Keywords/ Summary
-\section{Summary}
-This CV can also be automatically compiled and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
-
-%Experience
-\section{Work Experience}
-
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
-\end{jobshort}
-
-
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
-  
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
+\section*{Professional Experience}
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\textbf{\color{avcsdark}Founder \& Decision Architect} \hfill \textbf{\color{avcsgray}2016 – Present} \\
+\role{Independent Research \& Professional Practice — AVCS} \\
+\vspace{2pt}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Developed \textbf{AVCS (Adaptive Vector Control System)} as a proprietary framework for structural integrity of operational decision systems.
+    \item Analyse how organizations convert information, warnings, deviations and operational conditions into authorized action.
+    \item Examine the effectiveness of controls and procedures under abnormal, uncertain and time-critical conditions.
+    \item Analyse decision ownership, authority boundaries, escalation pathways and intervention mechanisms.
+    \item Examine gaps between documented procedures and actual operational behaviour.
+    \item Develop structural diagnostics for operational drift, unclear authority and weakened intervention pathways.
+    \item Conduct case-based analysis of major high-risk operational failures and their decision environments.
+    \item Conduct independent research into decision architecture, human performance and operational control.
+    \item Develop simulation-based AVCS tools and a virtual operational decision environment for testing architectural concepts.
+\end{itemize}
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+\vspace{4pt}
+\textit{\color{avcsgray}Selected analytical areas: Deepwater Horizon \textbar\ Piper Alpha \textbar\ El Faro \textbar\ Sewol Ferry \textbar\ Cidade de São Mateus \textbar\ Three Mile Island}
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
-
-2021 & Class 10th Some Board \hfill  (Grades) \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+\vspace{8pt}
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
+\textbf{\color{avcsdark}FSO CCR / Production Operator} \hfill \textbf{\color{avcsgray}2009 – 2016} \\
+\role{Petronas Carigali} \\
+\vspace{2pt}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Monitored and controlled offshore production processes from the Central Control Room (CCR).
+    \item Responded to changing operating conditions, alarms and abnormal situations.
+    \item Coordinated operational activities between control-room and field personnel.
+    \item Supported safe and stable production under changing operational conditions.
+    \item Monitored process parameters and equipment status.
+    \item Participated in operational troubleshooting and abnormal-condition response.
+    \item Maintained operational communication and coordination during time-critical situations.
+    \item Worked within established operating procedures while responding to actual field conditions.
+\end{itemize}
 
-\vfill
-\center{\footnotesize Last updated: \today}
+\vspace{4pt}
+\textit{\color{avcsgray}Operational strengths: decision-making under pressure \textbullet\ control-room situational awareness \textbullet\ recognition of developing operational deviations \textbullet\ practical understanding of procedure vs. operational reality}
+
+\vspace{8pt}
+
+%----------------------------------------------------------------------------------------
+\textbf{\color{avcsdark}Pumpman / CCR Trainee} \hfill \textbf{\color{avcsgray}2006 – 2009} \\
+\role{SBM Offshore} \\
+\vspace{2pt}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Supported cargo, pumping and marine/production-related operations aboard offshore floating production assets.
+    \item Developed practical knowledge of offshore production systems and operating interfaces.
+    \item Progressed toward control-room and production responsibilities.
+    \item Worked within multinational offshore operating environments.
+\end{itemize}
+
+\vspace{8pt}
+
+%----------------------------------------------------------------------------------------
+\textbf{\color{avcsdark}Motorman $\rightarrow$ Ship Mechanical Technician} \hfill \textbf{\color{avcsgray}1993 – 2006} \\
+\role{Turkmen Shipping / Marine Operations} \\
+\vspace{2pt}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Operation and maintenance of main and auxiliary machinery.
+    \item Monitoring machinery condition and operating parameters.
+    \item Troubleshooting mechanical and machinery-system problems.
+    \item Preventive and corrective maintenance.
+    \item Working with pumps, compressors, engines, auxiliary systems.
+    \item Responding to equipment abnormalities under operational constraints.
+\end{itemize}
+
+\vspace{4pt}
+\textit{\color{avcsgray}This period established the practical engineering foundation that later developed into offshore production and control-room operations.}
+
+%----------------------------------------------------------------------------------------
+% AVCS — SELECTED PROFESSIONAL DEVELOPMENT
+%----------------------------------------------------------------------------------------
+\section*{AVCS — Selected Professional Development}
+
+\textbf{\color{avcsdark}Adaptive Vector Control System} \hfill \textbf{\color{avcsgray}2016 – Present}
+
+\vspace{2pt}
+Independent development of a proprietary decision-integrity framework for high-risk operational environments.
+
+AVCS examines whether an operational decision environment contains the structural conditions necessary to:
+
+\begin{center}
+\textbf{Detect $\rightarrow$ Trigger $\rightarrow$ Establish Authority $\rightarrow$ Intervene $\rightarrow$ Act $\rightarrow$ Record}
+\end{center}
+
+\textbf{Areas of focus:}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Trigger clarity
+    \item Decision ownership
+    \item Protected intervention
+    \item Override transparency
+    \item Drift detection
+    \item Authority boundaries
+    \item Evidence-based decision status
+    \item Pre-incident structural vulnerability
+\end{itemize}
+
+\vspace{4pt}
+\textit{AVCS does not replace engineering judgement, operational expertise, HSE systems, risk management or regulatory authority. Its purpose is to examine whether existing information, controls and procedures can be converted into timely, authorized and reviewable action when operating conditions change.}
+
+%----------------------------------------------------------------------------------------
+% OPERATIONAL PROBLEM OF FOCUS
+%----------------------------------------------------------------------------------------
+\section*{Operational Problem of Focus}
+
+High-risk organizations rarely lack information. The structural problem is often what happens between information and action.
+
+\textbf{My work focuses on questions such as:}
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Who owns the decision?
+    \item What condition triggers intervention?
+    \item Is the authority to stop explicit?
+    \item Can intervention occur without retaliation or ambiguity?
+    \item What happens when procedure and reality diverge?
+    \item What happens when the operational boundary changes faster than the organization can respond?
+    \item Can the decision be reconstructed later from evidence?
+    \item Can the organization maintain control when conditions become abnormal or time-critical?
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+% RESEARCH & PROFESSIONAL WORK
+%----------------------------------------------------------------------------------------
+\section*{Research \& Professional Work}
+
+Independent research into:
+\begin{itemize}[leftmargin=*, nosep, itemsep=2pt]
+    \item Structural integrity of operational decision systems
+    \item Decision-making under pressure
+    \item Operational drift
+    \item Authority and intervention architecture
+    \item Human performance in high-risk environments
+    \item Procedure-versus-reality divergence
+    \item Pre-incident vulnerability
+    \item Decision boundaries in time-critical operations
+\end{itemize}
+
+\vspace{4pt}
+\textbf{Joint working research:} Wojciech Z. Kaleta, PhD (Decision Engineering) — examining the relationship between decision epistemology and structural decision integrity. Joint Working Research Note, Version 1.1 (August 2026).
+
+%----------------------------------------------------------------------------------------
+% EDUCATION & MARITIME TECHNICAL TRAINING
+%----------------------------------------------------------------------------------------
+\section*{Education \& Maritime Technical Training}
+
+\textbf{\color{avcsdark}Marine Lyceum No. 12, Turkmenbashi} \hfill \textbf{\color{avcsgray}1995} \\
+\role{Marine Power Plant Operations / Operation of Main Ship Power Plants} \\
+Technical Secondary Specialized Education
+
+%----------------------------------------------------------------------------------------
+% LANGUAGES
+%----------------------------------------------------------------------------------------
+\section*{Languages}
+
+\textbf{Russian} — Native \quad\textbar\quad
+\textbf{English} — B2 (Upper Intermediate) \quad\textbar\quad
+\textbf{Spanish} — B2 (Upper Intermediate) \quad\textbar\quad
+\textbf{Turkmen} — B1 (Intermediate)
+
+%----------------------------------------------------------------------------------------
+% PROFESSIONAL POSITION
+%----------------------------------------------------------------------------------------
+\section*{Professional Position}
+
+\textbf{\color{avcsdark}Decision Architect for High-Risk Operations}
+
+\vspace{2pt}
+My professional focus sits at the intersection of:
+
+\begin{center}
+\textbf{Operational Reality $\rightarrow$ Reliability $\rightarrow$ Decision Integrity $\rightarrow$ Human Authority}
+\end{center}
+
+I bring a field-based understanding of marine and offshore operations together with an independently developed framework for examining how decision systems behave under pressure.
+
+\vspace{4pt}
+\begin{center}
+\textit{Machines compute. Systems structure reality. Humans remain sovereign.} \\[2pt]
+\textit{North is not interpreted. North is applied.}
+\end{center}
 
 \end{document}
