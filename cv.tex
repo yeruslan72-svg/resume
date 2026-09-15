@@ -19,7 +19,6 @@
 \usepackage{xcolor}
 \usepackage{tabularx}
 \usepackage{array}
-\usepackage{fontawesome5}
 \usepackage{parskip}
 
 %----------------------------------------------------------------------------------------
@@ -41,24 +40,34 @@
 }
 
 %----------------------------------------------------------------------------------------
-% SECTION STYLE
+% SECTION STYLE — centered, no line
 %----------------------------------------------------------------------------------------
 \titleformat{\section}
-    {\Large\bfseries\color{avcsdark}}
+    {\Large\bfseries\color{avcsdark}\centering}
     {}{0em}{}
-    [\vspace{0.3em}\color{avcsgold}\rule{\textwidth}{0.8pt}]
+    []
 
-\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titlespacing*{\section}{0pt}{16pt}{6pt}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM COMMANDS
 %----------------------------------------------------------------------------------------
+\newcommand{\sectionline}{%
+    \vspace{0.2em}
+    {\color{avcsgold}\rule{\textwidth}{0.8pt}}
+    \vspace{0.2em}
+}
+
 \newcommand{\trajectory}[1]{%
+    \sectionline
+    \vspace{0.4em}
     \begin{center}
         \small\bfseries\color{avcsdark}
         #1
     \end{center}
-    \vspace{0.5em}
+    \vspace{0.4em}
+    \sectionline
+    \vspace{0.8em}
 }
 
 %----------------------------------------------------------------------------------------
@@ -81,7 +90,7 @@
     }
 \end{center}
 
-\vspace{0.5em}
+\vspace{0.8em}
 
 %----------------------------------------------------------------------------------------
 % PROFESSIONAL TRAJECTORY
