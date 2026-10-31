@@ -1,54 +1,105 @@
-# autoCV
+# YERUSLAN CHIHACHYOV
+## Operational Reliability & Decision Architecture
 
-A clean CV template in LaTeX along with a GitHub action that complies the `*.tex` file and publishes a new PDF version when new changes are pushed to the repo
+**Marine · Offshore · FSO/FPSO · Production Operations**
 
-## Template Design
+30+ years of practical experience in marine engineering, offshore operations, asset recovery and production environments.
 
-The template is designed to be clean with sections for
-- Tabular sections for Work Experience, Education and Projects
-- Support for including a list of publications read from a `*.bib` file
-- Header with Font Awesome icons
+I combine hands-on operational experience with independent research into the structural integrity of decision-making in high-risk operations.
 
-## Quickstart
-- Generate your copy of the repo using the `Use this template` button
-- Give the workflow write permissions for your forked repo (Settings -> Actions -> General)
-- Modify the `cv.tex` file and push changes to your repo
-- Set GitHub pages source to build branch (Settings -> Pages)
-- The complied PDF will be available under the `build` branch
+My professional focus is where equipment reliability, operational execution and human decision-making meet.
 
-You can get a direct link to the generated PDF which you can use on your website, LinkedIn etc. that will always point to the latest version of your CV. Once your site is published, your CV will be accessible at: `https://username.github.io/repo-name/`
+---
 
-NOTE: For the direct link to work, after editing your copy of `cv.tex` and pushing changes to your repo, under Settings -> Pages set your Github Pages source to the `build` directory
+## PROFESSIONAL PROFILE
 
-![](https://i.imgur.com/lwATw1o.png)
+My career has progressed from marine engineering and machinery maintenance to offshore production, FSO cargo operations and control-room coordination.
 
-## This template on Overleaf
+I have worked in environments where equipment failures, changing operating conditions, incomplete information and time pressure demand practical judgement, coordination and accountability.
 
-<a href="https://www.overleaf.com/latex/templates/autocv/scfvqfpxncwb"><img alt="Overleaf" src="https://img.shields.io/badge/Overleaf-47A141.svg?style=for-the-badge&logo=Overleaf&logoColor=white"/></a>
+Today, I combine this operational background with the development of **AVCS — Adaptive Vector Control System**, a proprietary framework for examining decision integrity in high-risk operational environments.
 
-Also, if you have a premium subscription to Overleaf, you can use Overleaf's GitHub integration to push changes to your GitHub repo directly from Overleaf.
+---
 
-## Compiling the CV on your local computer
-- type `make` in the `autoCV` directory to produce file `cv.pdf`
-- you can optionally type `make clean` or `make distclean` to remove intermediate files
+## SELECTED PORTFOLIO
 
-## Detailed Instructions..
+### 1. Executive Value Profile
 
-[.. are available here](https://github.com/jitinnair1/autoCV/wiki/How-to-use-autoCV:-Detailed-Instructions)
+A concise overview of my professional background, capabilities and potential areas of engagement.
 
-## More options
-- If you'd like a custom URL like `cv.name.com` check out [this page](https://github.com/jitinnair1/autoCV/wiki/Custom-URL-for-your-CV)
-- If you want to add use different versions of the CV for different langauges, you can modify the script [as seen here](https://github.com/MateusRosario/myAutoCV/blob/main/.github/workflows/build.yml) (from Mateus Rosario's [fork](https://github.com/MateusRosario/myAutoCV) of this repo)  
+[Read Executive Value Profile](portfolio/executive-value-profile.md)
 
-## Issues
-Please start a new discussion or issue if you encounter problems
+### 2. Asset Recovery Case Study
 
-PS: If you liked the template, do star :star: it! Thanks!
+**From Decommissioning to 12 More Years of Service**
 
+A practical case of restoring a 1972 port tug that had been considered for decommissioning, coordinating its recovery and returning it to productive service for another 12 years.
 
-### Also, check out:
+[Read Asset Recovery Case Study](portfolio/asset-recovery-case.md)
 
-- [gradfolio](https://github.com/jitinnair1/gradfolio) - a minimal, quick-setup template for a personal website/portfolio
-- [Tail](https://github.com/jitinnair1/tail) - a minimal, quick-setup template for a blog
-- [snippet-book](https://github.com/jitinnair1/snippet-book) -terminal style, clean Jekyll blog theme with catppuccin colours
+---
 
+## PROFESSIONAL EXPERIENCE
+
+| Organisation | Position | Period |
+|---|---|---|
+| Petronas Carigali (Turkmenistan) Sdn Bhd | FSO Cargo Operator | 2009–2016 |
+| SBM Offshore | Pumpman | 2006–2009 |
+| Turkmen Maritime and River Lines | Progressive Marine Engineering Roles | 1993–2006 |
+
+My experience includes marine machinery, cargo and ballast systems, custody transfer, offshore operations, technical coordination, equipment condition observation and emergency response.
+
+---
+
+## AVCS — INDEPENDENT RESEARCH & DEVELOPMENT
+
+**Adaptive Vector Control System**
+
+AVCS is an independently developed framework focused on the structural integrity of decision-making in high-risk operations.
+
+Its areas of examination include:
+
+- Decision ownership and authority boundaries.
+- Escalation and intervention pathways.
+- Operational drift and control integrity.
+- Visibility of overrides and deviations.
+- The conversion of information and warnings into accountable action.
+
+AVCS is currently at the framework, research and simulation stage. It is intended to complement established operational and safety systems, not replace professional judgement or regulatory authority.
+
+**Machines compute. Systems structure reality. Humans remain sovereign.**
+
+---
+
+## AREAS OF PROFESSIONAL INTEREST
+
+- Operational reliability and asset recovery.
+- Marine and offshore operations.
+- Production and technical operations coordination.
+- Equipment condition observation and early intervention.
+- Operational decision integrity.
+- AVCS research, demonstrations and potential collaboration.
+
+---
+
+## CONTACT
+
+**Yeruslan Chihachyov**
+
+- Email: yeruslan72@gmail.com
+- LinkedIn: [Professional Profile](https://www.linkedin.com/in/yeruslan-chihachyov-70a807126)
+- GitHub: [yeruslan72-svg](https://github.com/yeruslan72-svg)
+
+---
+
+## CV — AUTOMATED PDF BUILD
+
+This repository also maintains a LaTeX-based professional CV.
+
+The CV source is maintained in `cv.tex`. GitHub Actions can compile and publish the PDF when changes are pushed to the repository.
+
+For technical details, see the repository workflow configuration in `.github/workflows/`.
+
+---
+
+*Operational experience. Structural thinking. Human-centred reliability.*
