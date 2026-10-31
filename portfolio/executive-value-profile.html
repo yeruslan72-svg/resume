@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a1628">
+  <meta name="description" content="Yeruslan Chihachyov — Operational Reliability and Decision Architecture. Marine, offshore and production operations.">
+  <title>Executive Value Profile | Yeruslan Chihachyov</title>
+
+  <style>
+    :root {
+      --navy: #0a1628;
+      --navy-light: #11233b;
+      --gold: #d4af37;
+      --white: #f5f0e1;
+      --muted: #b8c1ce;
+      --line: rgba(212, 175, 55, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--navy);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      padding: 18px 24px;
+      text-align: center;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .container {
+      width: min(100% - 40px, 960px);
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 88px 0 64px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.08;
+      letter-spacing: -2px;
+      font-weight: 700;
+    }
+
+    .hero h2 {
+      color: var(--gold);
+      font-size: clamp(19px, 3vw, 27px);
+      line-height: 1.4;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 22px 0 18px;
+    }
+
+    .specialties {
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      max-width: 760px;
+      margin-top: 30px;
+      font-size: 19px;
+      color: var(--white);
+      line-height: 1.7;
+    }
+
+    .section {
+      padding: 54px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-label {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h3 {
+      color: var(--white);
+      font-size: 25px;
+      line-height: 1.3;
+      margin: 0 0 22px;
+    }
+
+    h4 {
+      color: var(--gold);
+      font-size: 18px;
+      margin: 30px 0 5px;
+    }
+
+    p {
+      color: var(--muted);
+      margin: 0 0 17px;
+    }
+
+    strong {
+      color: var(--white);
+    }
+
+    ul {
+      padding-left: 22px;
+      margin: 15px 0 0;
+      color: var(--muted);
+    }
+
+    li {
+      padding-left: 5px;
+      margin-bottom: 9px;
+    }
+
+    li::marker {
+      color: var(--gold);
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .value-card {
+      background: var(--navy-light);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      padding: 23px;
+    }
+
+    .value-card h4 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+
+    .value-card p {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .achievement {
+      background: var(--navy-light);
+      border: 1px solid var(--gold);
+      border-left: 4px solid var(--gold);
+      border-radius: 4px;
+      padding: 30px;
+      margin-top: 25px;
+    }
+
+    .achievement h3 {
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .achievement .number {
+      display: block;
+      color: var(--gold);
+      font-size: 48px;
+      line-height: 1.1;
+      font-weight: bold;
+      margin: 18px 0 5px;
+    }
+
+    .achievement .number-caption {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .experience-item {
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .experience-item:last-child {
+      border-bottom: 0;
+    }
+
+    .experience-item h4 {
+      margin-top: 0;
+    }
+
+    .location {
+      color: var(--gold);
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .avcs-panel {
+      background: linear-gradient(135deg, #11233b, #0a1628);
+      border: 1px solid var(--gold);
+      border-radius: 5px;
+      padding: 32px;
+      margin-top: 25px;
+    }
+
+    .avcs-title {
+      color: var(--gold);
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .doctrine {
+      text-align: center;
+      padding: 42px 20px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      margin: 45px 0;
+    }
+
+    .doctrine p {
+      color: var(--white);
+      font-size: clamp(20px, 3vw, 27px);
+      line-height: 1.55;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .contact {
+      background: var(--navy-light);
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+    }
+
+    .contact p {
+      margin-bottom: 9px;
+    }
+
+    .footer {
+      padding: 35px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 25px;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .hero {
+        padding: 58px 0 45px;
+      }
+
+      .value-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 40px 0;
+      }
+
+      .achievement,
+      .avcs-panel,
+      .contact {
+        padding: 22px;
+      }
+
+      .container {
+        width: min(100% - 32px, 960px);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    OEDC · Professional Profile
+  </div>
+
+  <main class="container">
+
+    <header class="hero">
+      <div class="eyebrow">Marine · Offshore · Industrial Operations</div>
+
+      <h1>YERUSLAN<br>CHIHACHYOV</h1>
+
+      <h2>Operational Reliability<br>&amp; Decision Architecture</h2>
+
+      <div class="specialties">
+        Marine Engineering · FSO/FPSO · Production Operations
+      </div>
+
+      <p class="intro">
+        30+ years of practical experience in marine engineering,
+        offshore operations and operational problem-solving.
+      </p>
+
+      <a class="back-link" href="../index.html">← Back to main profile</a>
+    </header>
+
+    <section class="section">
+      <div class="section-label">01 / Professional Value</div>
+      <h3>Operational Experience. Structural Thinking.</h3>
+
+      <p>
+        I bring together practical operational experience and an
+        independent approach to examining how organisations maintain
+        control when equipment, operating conditions and human decisions
+        come under pressure.
+      </p>
+
+      <p>
+        My background spans marine engineering, offshore production and
+        FSO operations — from hands-on machinery work and technical
+        maintenance to cargo operations, control-room coordination
+        and operational response.
+      </p>
+
+      <p>I focus on the connection between three critical elements:</p>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <h4>Asset Reliability</h4>
+          <p>
+            Recognising developing equipment problems and restoring
+            operational capability.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h4>Operational Execution</h4>
+          <p>
+            Connecting field conditions, technical teams and
+            control-room decisions.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h4>Decision Integrity</h4>
+          <p>
+            Examining whether responsibility, authority, escalation
+            and intervention remain clear when conditions change.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">02 / Selected Achievement</div>
+      <h3>Asset Recovery Under Severe Constraints</h3>
+
+      <div class="achievement">
+        <h3>From Decommissioning to 12 More Years of Service</h3>
+
+        <p>
+          As a Senior Mechanic, I led the recovery of a 1972 port tug
+          that had become immobilised and was being considered
+          for decommissioning.
+        </p>
+
+        <p>
+          Several critical systems were out of service, including
+          main and auxiliary engines, the air compressor, fire pump
+          and ballast pump.
+        </p>
+
+        <p>
+          Working with the crew, I organised the recovery effort,
+          mobilised the team and helped secure scarce spare parts,
+          including components recovered from decommissioned vessels.
+        </p>
+
+        <p>
+          Following restoration, sea trials demonstrated that the tug
+          was operational. The vessel was retained on the port's
+          balance sheet and returned to service.
+        </p>
+
+        <span class="number">12 YEARS</span>
+        <span class="number-caption">Additional service after restoration</span>
+
+        <p style="margin-top:22px;">
+          It continued performing ship manoeuvring and fuel and water
+          supply operations for another 12 years.
+        </p>
+
+        <p>
+          This experience demonstrates practical asset recovery,
+          team mobilisation, technical coordination and the ability
+          to restore productive value under severe resource constraints.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">03 / Offshore Experience</div>
+      <h3>Operational Background</h3>
+
+      <div class="experience-item">
+        <h4>Petronas Carigali — FSO Cargo Operator | 2009–2016</h4>
+        <div class="location">Caspian Sea · Diyarbekir Field</div>
+
+        <ul>
+          <li>Cargo, ballast and export oil operations.</li>
+          <li>Fiscal metering and custody-transfer monitoring.</li>
+          <li>Control-room coordination, operational logging and alarm monitoring.</li>
+          <li>Monitoring vessel trim, draft and hull stresses.</li>
+          <li>Coordination of supply operations and vessel traffic within the 500-metre zone.</li>
+          <li>Recognition of developing equipment degradation, including abnormal pump bearing temperatures and vibration.</li>
+          <li>Coordination with mechanical personnel to support timely intervention.</li>
+          <li>Emergency response duties and operations under established H₂S safety procedures.</li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <h4>SBM Offshore — Pumpman | 2006–2009</h4>
+        <div class="location">Caspian Sea</div>
+
+        <ul>
+          <li>Cargo and ballast system operations on MOPU/FSO facilities.</li>
+          <li>Coordination with CCR during loading and offloading.</li>
+          <li>Cargo and ballast pump and valve maintenance.</li>
+          <li>Tank cleaning, crude oil sampling and Permit-to-Work compliance.</li>
+          <li>Emergency Response Team participation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">04 / Independent Research &amp; Development</div>
+      <h3>AVCS — Adaptive Vector Control System</h3>
+
+      <div class="avcs-panel">
+        <div class="avcs-title">AVCS DNA MATRIX</div>
+
+        <p style="margin-top:18px;">
+          I am developing AVCS, a proprietary framework for examining
+          the structural integrity of decision-making in high-risk
+          operational environments.
+        </p>
+
+        <p>Its focus includes:</p>
+
+        <ul>
+          <li>Decision ownership and authority boundaries.</li>
+          <li>Clarity of escalation and intervention pathways.</li>
+          <li>Visibility of overrides and operational deviations.</li>
+          <li>The relationship between procedures and actual operating conditions.</li>
+          <li>The conversion of warnings and information into timely, accountable action.</li>
+        </ul>
+
+        <p style="margin-top:22px;">
+          AVCS is currently at the framework, research and simulation
+          stage. It is intended to complement existing operational,
+          engineering and safety systems — not replace professional
+          judgment, regulatory authority or established safety responsibilities.
+        </p>
+      </div>
+
+      <div class="doctrine">
+        <p>
+          Machines compute.<br>
+          Systems structure reality.<br>
+          Humans remain sovereign.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">05 / Potential Engagement</div>
+      <h3>Areas of Professional Contribution</h3>
+
+      <ul>
+        <li>Operational reliability and asset recovery.</li>
+        <li>Technical and production operations coordination.</li>
+        <li>Analysis of operational weaknesses and developing equipment problems.</li>
+        <li>Review of control-room and field interfaces.</li>
+        <li>Decision ownership, escalation and intervention architecture.</li>
+        <li>Independent AVCS diagnostic research and structured demonstrations.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-label">06 / Professional Contact</div>
+      <h3>Contact</h3>
+
+      <div class="contact">
+        <p><strong>Yeruslan Chihachyov</strong></p>
+
+        <p>
+          Email:
+          <a href="mailto:yeruslan72@gmail.com">yeruslan72@gmail.com</a>
+        </p>
+
+        <p>
+          LinkedIn:
+          <a href="https://linkedin.com/in/yeruslan-chihachyov-70a807126" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/yeruslan-chihachyov-70a807126
+          </a>
+        </p>
+
+        <p>
+          GitHub:
+          <a href="https://github.com/yeruslan72-svg/resume" target="_blank" rel="noopener noreferrer">
+            github.com/yeruslan72-svg/resume
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    OEDC · OPERATIONAL RELIABILITY &amp; DECISION ARCHITECTURE
+    <br><br>
+    Operational experience. Structural thinking. Human-centred reliability.
+  </footer>
+
+</body>
+</html>
