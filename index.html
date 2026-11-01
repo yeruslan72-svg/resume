@@ -23,7 +23,9 @@
       --line: rgba(198,164,92,.28);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -38,7 +40,9 @@
       text-decoration: none;
     }
 
-    a:hover { text-decoration: underline; }
+    a:hover {
+      text-decoration: underline;
+    }
 
     .container {
       width: min(1080px, 90%);
@@ -62,6 +66,17 @@
       border-bottom: 1px solid var(--line);
     }
 
+    .hero-photo {
+      float: right;
+      width: 220px;
+      height: 260px;
+      object-fit: cover;
+      object-position: center top;
+      border: 1px solid var(--gold);
+      padding: 5px;
+      margin: 0 0 25px 40px;
+    }
+
     .eyebrow {
       color: var(--gold);
       letter-spacing: 3px;
@@ -78,7 +93,9 @@
       letter-spacing: -2px;
     }
 
-    h1 span { color: var(--gold); }
+    h1 span {
+      color: var(--gold);
+    }
 
     .subtitle {
       color: var(--muted);
@@ -116,7 +133,9 @@
       font-weight: bold;
     }
 
-    section { padding: 70px 0; }
+    section {
+      padding: 70px 0;
+    }
 
     h2 {
       color: var(--gold);
@@ -131,7 +150,9 @@
       margin: 0 0 12px;
     }
 
-    p { color: var(--muted); }
+    p {
+      color: var(--muted);
+    }
 
     .grid {
       display: grid;
@@ -145,7 +166,9 @@
       padding: 27px;
     }
 
-    .card p { font-size: 14px; }
+    .card p {
+      font-size: 14px;
+    }
 
     .number {
       color: var(--gold);
@@ -168,8 +191,13 @@
       gap: 20px;
     }
 
-    .experience strong { color: var(--white); }
-    .experience span { color: var(--muted); }
+    .experience strong {
+      color: var(--white);
+    }
+
+    .experience span {
+      color: var(--muted);
+    }
 
     .statement {
       background: var(--navy-light);
@@ -181,7 +209,9 @@
       letter-spacing: .5px;
     }
 
-    .statement span { color: var(--gold); }
+    .statement span {
+      color: var(--gold);
+    }
 
     footer {
       border-top: 1px solid var(--line);
@@ -198,7 +228,18 @@
     }
 
     @media (max-width: 600px) {
-      .hero { padding: 70px 0; }
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-photo {
+        float: none;
+        display: block;
+        width: 180px;
+        height: 210px;
+        margin: 0 auto 30px;
+      }
+
       .experience {
         grid-template-columns: 1fr;
         gap: 5px;
@@ -219,6 +260,12 @@
 
   <section class="hero">
     <div class="container">
+
+      <img
+        class="hero-photo"
+        src="./assets/yeruslan-portrait.png"
+        alt="Yeruslan Chihachyov"
+      >
 
       <div class="eyebrow">
         Marine · Offshore · Production Operations
@@ -347,49 +394,50 @@
     <span>Humans remain sovereign.</span>
   </div>
 
- 
-<section>
-  <div class="container">
-    <h2>AVCS — Independent Research & Development</h2>
+  <section>
+    <div class="container">
+      <h2>AVCS — Independent Research & Development</h2>
 
-    <h3>Adaptive Vector Control System</h3>
-
-    <p>
-      AVCS is a proprietary framework in development for examining
-      the structural integrity of decision-making in high-risk
-      operational environments.
-    </p>
-
-    <p>
-      Its development focuses on decision ownership, intervention
-      boundaries, operational clarity and the relationship between
-      human responsibility and engineered intelligence.
-    </p>
-
-    <div class="case">
-      <div class="eyebrow">Interactive Diagnostic Demonstration</div>
-
-      <h3>AVCS SIM LIGHT</h3>
+      <h3>Adaptive Vector Control System</h3>
 
       <p>
-        Explore the AVCS diagnostic approach through its public
-        demonstration interface.
+        AVCS is a proprietary framework in development for examining
+        the structural integrity of decision-making in high-risk
+        operational environments.
       </p>
 
-      <a href="https://avcs-sim-wmcfx3dkczezizmqi8skbm.streamlit.app/"
-         target="_blank"
-         rel="noopener noreferrer">
-        Explore AVCS SIM LIGHT →
-      </a>
-    </div>
+      <p>
+        Its development focuses on decision ownership, intervention
+        boundaries, operational clarity and the relationship between
+        human responsibility and engineered intelligence.
+      </p>
 
-    <p class="disclaimer">
-      The demonstration is a research and diagnostic interface.
-      It does not constitute independent certification or
-      validated operational assurance.
-    </p>
-  </div>
-</section>
+      <div class="case">
+        <div class="eyebrow">Interactive Diagnostic Demonstration</div>
+
+        <h3>AVCS SIM LIGHT</h3>
+
+        <p>
+          Explore the AVCS diagnostic approach through its public
+          demonstration interface.
+        </p>
+
+        <a href="https://avcs-sim-wmcfx3dkczezizmqi8skbm.streamlit.app/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Explore AVCS SIM LIGHT →
+        </a>
+      </div>
+
+      <p class="disclaimer">
+        The demonstration is a research and diagnostic interface.
+        It does not constitute independent certification or
+        validated operational assurance.
+      </p>
+    </div>
+  </section>
+
+</main>
 
 <footer>
   <div class="container">
