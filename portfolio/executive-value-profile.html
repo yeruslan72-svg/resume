@@ -5,13 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0a1628">
-  <meta name="description" content="Yeruslan Chihachyov — Operational Reliability and Decision Architecture. Marine, offshore and production operations.">
+
+  <meta name="description" content="Yeruslan Chihachyov — Operational Reliability, Marine Engineering, Offshore Operations and Asset Recovery. More than 30 years of practical operational experience.">
+
+  <meta property="og:title" content="Executive Value Profile | Yeruslan Chihachyov">
+  <meta property="og:description" content="Operational experience. Technical coordination. Structural thinking.">
+  <meta property="og:type" content="website">
+
   <title>Executive Value Profile | Yeruslan Chihachyov</title>
 
   <style>
     :root {
       --navy: #0a1628;
       --navy-light: #11233b;
+      --navy-deep: #07111f;
       --gold: #d4af37;
       --white: #f5f0e1;
       --muted: #b8c1ce;
@@ -56,12 +63,12 @@
     }
 
     .container {
-      width: min(100% - 40px, 960px);
+      width: min(100% - 40px, 1000px);
       margin: 0 auto;
     }
 
     .hero {
-      padding: 88px 0 64px;
+      padding: 88px 0 65px;
       border-bottom: 1px solid var(--line);
     }
 
@@ -98,15 +105,38 @@
     }
 
     .intro {
-      max-width: 760px;
+      max-width: 790px;
       margin-top: 30px;
       font-size: 19px;
       color: var(--white);
       line-height: 1.7;
     }
 
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .button.primary {
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: bold;
+    }
+
     .section {
-      padding: 54px 0;
+      padding: 58px 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -129,7 +159,7 @@
     h4 {
       color: var(--gold);
       font-size: 18px;
-      margin: 30px 0 5px;
+      margin: 28px 0 5px;
     }
 
     p {
@@ -160,13 +190,13 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .value-card {
       background: var(--navy-light);
       border: 1px solid var(--line);
-      border-radius: 5px;
+      border-radius: 4px;
       padding: 23px;
     }
 
@@ -200,10 +230,10 @@
       font-size: 48px;
       line-height: 1.1;
       font-weight: bold;
-      margin: 18px 0 5px;
+      margin: 22px 0 5px;
     }
 
-    .achievement .number-caption {
+    .number-caption {
       color: var(--muted);
       font-size: 12px;
       text-transform: uppercase;
@@ -211,7 +241,7 @@
     }
 
     .experience-item {
-      padding: 20px 0;
+      padding: 22px 0;
       border-bottom: 1px solid rgba(255,255,255,0.09);
     }
 
@@ -232,7 +262,7 @@
     .avcs-panel {
       background: linear-gradient(135deg, #11233b, #0a1628);
       border: 1px solid var(--gold);
-      border-radius: 5px;
+      border-radius: 4px;
       padding: 32px;
       margin-top: 25px;
     }
@@ -242,6 +272,14 @@
       font-size: 22px;
       font-weight: bold;
       letter-spacing: 1px;
+    }
+
+    .status-note {
+      border-left: 2px solid var(--gold);
+      padding: 12px 18px;
+      margin-top: 20px;
+      background: rgba(212, 175, 55, 0.06);
+      font-size: 14px;
     }
 
     .doctrine {
@@ -260,11 +298,35 @@
       margin: 0;
     }
 
+    .doctrine span {
+      color: var(--gold);
+    }
+
+    .engagement-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .engagement-item {
+      background: var(--navy-light);
+      border: 1px solid var(--line);
+      padding: 19px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .engagement-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
     .contact {
       background: var(--navy-light);
       padding: 30px;
       border: 1px solid var(--line);
-      border-radius: 5px;
+      border-radius: 4px;
     }
 
     .contact p {
@@ -292,12 +354,13 @@
         padding: 58px 0 45px;
       }
 
-      .value-grid {
+      .value-grid,
+      .engagement-grid {
         grid-template-columns: 1fr;
       }
 
       .section {
-        padding: 40px 0;
+        padding: 42px 0;
       }
 
       .achievement,
@@ -307,7 +370,7 @@
       }
 
       .container {
-        width: min(100% - 32px, 960px);
+        width: min(100% - 32px, 1000px);
       }
     }
   </style>
@@ -321,59 +384,92 @@
 
   <main class="container">
 
+    <!-- HERO -->
+
     <header class="hero">
-      <div class="eyebrow">Marine · Offshore · Industrial Operations</div>
 
-      <h1>YERUSLAN<br>CHIHACHYOV</h1>
+      <div class="eyebrow">
+        Marine · Offshore · Industrial Operations
+      </div>
 
-      <h2>Operational Reliability<br>&amp; Decision Architecture</h2>
+      <h1>
+        YERUSLAN<br>
+        CHIHACHYOV
+      </h1>
+
+      <h2>
+        Operational Reliability<br>
+        &amp; Decision Architecture
+      </h2>
 
       <div class="specialties">
-        Marine Engineering · FSO/FPSO · Production Operations
+        Marine Engineering · FSO/FPSO · Production Operations · Asset Recovery
       </div>
 
       <p class="intro">
-        30+ years of practical experience in marine engineering,
-        offshore operations and operational problem-solving.
+        More than 30 years of practical experience across marine
+        engineering, offshore operations and technical environments.
+        I bring frontline operational knowledge, technical coordination
+        and a structured approach to solving problems under pressure.
       </p>
 
-      <a class="back-link" href="../index.html">← Back to main profile</a>
+      <div class="hero-actions">
+        <a class="button primary" href="../cv.pdf">
+          View CV (PDF)
+        </a>
+
+        <a class="button" href="#contact">
+          Professional Contact
+        </a>
+      </div>
+
+      <a class="back-link" href="../index.html">
+        ← Back to main profile
+      </a>
+
     </header>
 
+    <!-- PROFESSIONAL VALUE -->
+
     <section class="section">
+
       <div class="section-label">01 / Professional Value</div>
-      <h3>Operational Experience. Structural Thinking.</h3>
+
+      <h3>
+        Operational Experience. Technical Coordination. Structural Thinking.
+      </h3>
 
       <p>
-        I bring together practical operational experience and an
-        independent approach to examining how organisations maintain
-        control when equipment, operating conditions and human decisions
-        come under pressure.
+        My professional background combines hands-on marine engineering,
+        offshore production operations, equipment-related problem-solving
+        and coordination between operational personnel and technical teams.
       </p>
 
       <p>
-        My background spans marine engineering, offshore production and
-        FSO operations — from hands-on machinery work and technical
-        maintenance to cargo operations, control-room coordination
-        and operational response.
+        I understand operations from the frontline: equipment condition,
+        operating constraints, communication, procedures and the
+        consequences of decisions made under pressure.
       </p>
 
-      <p>I focus on the connection between three critical elements:</p>
+      <p>
+        My professional contribution is centred on three connected areas:
+      </p>
 
       <div class="value-grid">
+
         <div class="value-card">
           <h4>Asset Reliability</h4>
           <p>
-            Recognising developing equipment problems and restoring
-            operational capability.
+            Recognising developing equipment problems, supporting
+            technical intervention and restoring operational capability.
           </p>
         </div>
 
         <div class="value-card">
           <h4>Operational Execution</h4>
           <p>
-            Connecting field conditions, technical teams and
-            control-room decisions.
+            Connecting field conditions, operational personnel,
+            technical teams and control-room coordination.
           </p>
         </div>
 
@@ -381,66 +477,95 @@
           <h4>Decision Integrity</h4>
           <p>
             Examining whether responsibility, authority, escalation
-            and intervention remain clear when conditions change.
+            and intervention remain clear when operating conditions change.
           </p>
         </div>
+
       </div>
+
     </section>
 
+    <!-- ACHIEVEMENT -->
+
     <section class="section">
+
       <div class="section-label">02 / Selected Achievement</div>
-      <h3>Asset Recovery Under Severe Constraints</h3>
+
+      <h3>
+        Asset Recovery Under Severe Constraints
+      </h3>
 
       <div class="achievement">
-        <h3>From Decommissioning to 12 More Years of Service</h3>
+
+        <h3>
+          From Decommissioning to 12 More Years of Service
+        </h3>
 
         <p>
-          As a Senior Mechanic, I led the recovery of a 1972 port tug
-          that had become immobilised and was being considered
-          for decommissioning.
+          As a Senior Mechanic, I led the recovery effort for a
+          1972 port tug that had become immobilised and was being
+          considered for decommissioning.
         </p>
 
         <p>
           Several critical systems were out of service, including
-          main and auxiliary engines, the air compressor, fire pump
+          the main and auxiliary engines, air compressor, fire pump
           and ballast pump.
         </p>
 
         <p>
           Working with the crew, I organised the recovery effort,
-          mobilised the team and helped secure scarce spare parts,
-          including components recovered from decommissioned vessels.
+          mobilised personnel and helped secure scarce spare parts.
+          Some components were sourced from decommissioned vessels.
         </p>
 
         <p>
-          Following restoration, sea trials demonstrated that the tug
-          was operational. The vessel was retained on the port's
-          balance sheet and returned to service.
+          Following restoration, successful sea trials demonstrated
+          that the tug was operational. The vessel was retained on
+          the port's balance sheet and returned to service.
         </p>
 
         <span class="number">12 YEARS</span>
-        <span class="number-caption">Additional service after restoration</span>
+
+        <span class="number-caption">
+          Additional service after restoration
+        </span>
 
         <p style="margin-top:22px;">
-          It continued performing ship manoeuvring and fuel and water
-          supply operations for another 12 years.
+          The tug continued performing ship manoeuvring and fuel
+          and water supply operations for another 12 years.
         </p>
 
         <p>
           This experience demonstrates practical asset recovery,
           team mobilisation, technical coordination and the ability
-          to restore productive value under severe resource constraints.
+          to restore operational capability under severe resource
+          constraints.
         </p>
+
       </div>
+
     </section>
 
+    <!-- PROFESSIONAL EXPERIENCE -->
+
     <section class="section">
-      <div class="section-label">03 / Offshore Experience</div>
-      <h3>Operational Background</h3>
+
+      <div class="section-label">03 / Professional Experience</div>
+
+      <h3>
+        Marine Engineering &amp; Offshore Operations
+      </h3>
 
       <div class="experience-item">
-        <h4>Petronas Carigali — FSO Cargo Operator | 2009–2016</h4>
-        <div class="location">Caspian Sea · Diyarbekir Field</div>
+
+        <h4>
+          Petronas Carigali — FSO Cargo Operator | 2009–2016
+        </h4>
+
+        <div class="location">
+          Caspian Sea · Diyarbekir Field
+        </div>
 
         <ul>
           <li>Cargo, ballast and export oil operations.</li>
@@ -452,36 +577,78 @@
           <li>Coordination with mechanical personnel to support timely intervention.</li>
           <li>Emergency response duties and operations under established H₂S safety procedures.</li>
         </ul>
+
       </div>
 
       <div class="experience-item">
-        <h4>SBM Offshore — Pumpman | 2006–2009</h4>
-        <div class="location">Caspian Sea</div>
+
+        <h4>
+          SBM Offshore — Pumpman | 2006–2009
+        </h4>
+
+        <div class="location">
+          Caspian Sea
+        </div>
 
         <ul>
           <li>Cargo and ballast system operations on MOPU/FSO facilities.</li>
           <li>Coordination with CCR during loading and offloading.</li>
           <li>Cargo and ballast pump and valve maintenance.</li>
-          <li>Tank cleaning, crude oil sampling and Permit-to-Work compliance.</li>
-          <li>Emergency Response Team participation.</li>
+          <li>Tank cleaning and crude oil sampling.</li>
+          <li>Permit-to-Work compliance and Emergency Response Team participation.</li>
         </ul>
+
       </div>
+
+      <div class="experience-item">
+
+        <h4>
+          Turkmen Maritime and River Lines — Marine Engineering Roles | 1993–2006
+        </h4>
+
+        <div class="location">
+          Turkmenistan · Maritime and River Operations
+        </div>
+
+        <ul>
+          <li>Progression from motorman to senior marine engineering responsibilities.</li>
+          <li>Operation and maintenance of marine machinery and engine-room systems.</li>
+          <li>Work with diesel engines, generators, pumps, compressors, fuel separators and auxiliary equipment.</li>
+          <li>Technical coordination, crew work and operational support aboard supply and bunker vessels.</li>
+        </ul>
+
+      </div>
+
     </section>
 
+    <!-- AVCS -->
+
     <section class="section">
-      <div class="section-label">04 / Independent Research &amp; Development</div>
-      <h3>AVCS — Adaptive Vector Control System</h3>
+
+      <div class="section-label">
+        04 / Independent Research &amp; Development
+      </div>
+
+      <h3>
+        AVCS — Adaptive Vector Control System
+      </h3>
 
       <div class="avcs-panel">
-        <div class="avcs-title">AVCS DNA MATRIX</div>
+
+        <div class="avcs-title">
+          AVCS DNA MATRIX
+        </div>
 
         <p style="margin-top:18px;">
-          I am developing AVCS, a proprietary framework for examining
-          the structural integrity of decision-making in high-risk
-          operational environments.
+          Alongside my operational career, I am developing AVCS,
+          a proprietary framework for examining the structural
+          integrity of decision-making in high-risk operational
+          environments.
         </p>
 
-        <p>Its focus includes:</p>
+        <p>
+          Its research focuses on:
+        </p>
 
         <ul>
           <li>Decision ownership and authority boundaries.</li>
@@ -491,71 +658,143 @@
           <li>The conversion of warnings and information into timely, accountable action.</li>
         </ul>
 
-        <p style="margin-top:22px;">
-          AVCS is currently at the framework, research and simulation
-          stage. It is intended to complement existing operational,
+        <div class="status-note">
+          <strong>Development status:</strong>
+          AVCS is at the framework, research and simulation stage.
+          It is intended to complement existing operational,
           engineering and safety systems — not replace professional
           judgment, regulatory authority or established safety responsibilities.
-        </p>
+        </div>
+
       </div>
 
       <div class="doctrine">
+
         <p>
           Machines compute.<br>
           Systems structure reality.<br>
-          Humans remain sovereign.
+          <span>Humans remain sovereign.</span>
         </p>
+
       </div>
+
     </section>
 
+    <!-- PROFESSIONAL CONTRIBUTION -->
+
     <section class="section">
+
       <div class="section-label">05 / Potential Engagement</div>
-      <h3>Areas of Professional Contribution</h3>
 
-      <ul>
-        <li>Operational reliability and asset recovery.</li>
-        <li>Technical and production operations coordination.</li>
-        <li>Analysis of operational weaknesses and developing equipment problems.</li>
-        <li>Review of control-room and field interfaces.</li>
-        <li>Decision ownership, escalation and intervention architecture.</li>
-        <li>Independent AVCS diagnostic research and structured demonstrations.</li>
-      </ul>
+      <h3>
+        Areas of Professional Contribution
+      </h3>
+
+      <p>
+        My experience may be relevant to organisations seeking
+        practical operational knowledge, technical coordination
+        and structured problem-solving in marine, offshore and
+        industrial environments.
+      </p>
+
+      <div class="engagement-grid">
+
+        <div class="engagement-item">
+          <strong>Operational Coordination</strong>
+          Supporting coordination between operational teams,
+          technical personnel and control-room activities.
+        </div>
+
+        <div class="engagement-item">
+          <strong>Asset Recovery</strong>
+          Contributing to the identification of equipment problems
+          and the restoration of operational capability.
+        </div>
+
+        <div class="engagement-item">
+          <strong>Operational Reliability</strong>
+          Examining equipment-related problems, operating constraints
+          and developing weaknesses.
+        </div>
+
+        <div class="engagement-item">
+          <strong>Operational Interfaces</strong>
+          Reviewing communication, escalation and coordination
+          between field operations and control functions.
+        </div>
+
+        <div class="engagement-item">
+          <strong>Decision Architecture</strong>
+          Contributing practical operational perspectives to the
+          examination of responsibility and intervention pathways.
+        </div>
+
+        <div class="engagement-item">
+          <strong>AVCS Research</strong>
+          Exploring independent diagnostic research and structured
+          demonstrations of decision-system integrity.
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="section">
+    <!-- CONTACT -->
+
+    <section class="section" id="contact">
+
       <div class="section-label">06 / Professional Contact</div>
-      <h3>Contact</h3>
+
+      <h3>
+        Professional Enquiries &amp; Collaboration
+      </h3>
 
       <div class="contact">
-        <p><strong>Yeruslan Chihachyov</strong></p>
+
+        <p>
+          <strong>Yeruslan Chihachyov</strong>
+        </p>
 
         <p>
           Email:
-          <a href="mailto:yeruslan72@gmail.com">yeruslan72@gmail.com</a>
+          <a href="mailto:yeruslan72@gmail.com">
+            yeruslan72@gmail.com
+          </a>
         </p>
 
         <p>
           LinkedIn:
-          <a href="https://linkedin.com/in/yeruslan-chihachyov-70a807126" target="_blank" rel="noopener noreferrer">
+          <a href="https://linkedin.com/in/yeruslan-chihachyov-70a807126"
+             target="_blank"
+             rel="noopener noreferrer">
             linkedin.com/in/yeruslan-chihachyov-70a807126
           </a>
         </p>
 
         <p>
           GitHub:
-          <a href="https://github.com/yeruslan72-svg/resume" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/yeruslan72-svg/resume"
+             target="_blank"
+             rel="noopener noreferrer">
             github.com/yeruslan72-svg/resume
           </a>
         </p>
+
       </div>
+
     </section>
 
   </main>
 
   <footer class="footer">
+
     OEDC · OPERATIONAL RELIABILITY &amp; DECISION ARCHITECTURE
+
     <br><br>
-    Operational experience. Structural thinking. Human-centred reliability.
+
+    Operational experience. Technical coordination.
+    Structural thinking. Human-centred reliability.
+
   </footer>
 
 </body>
