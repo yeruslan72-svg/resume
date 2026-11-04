@@ -4,8 +4,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Asset recovery case study: restoring a 1972 port tug and returning it to service for another 12 years.">
-<title>Asset Recovery | Yeruslan Chihachyov</title>
+<meta name="description" content="Case 001: the restoration of the 1972 port tug 100 Years of Krasnovodsk, led by its Chief Engineer and carried out by the engine-room team.">
+<title>Case 001 — Port Tug Recovery | Yeruslan Chihachyov</title>
 
 <style>
 :root {
@@ -15,254 +15,197 @@
   --gold-soft: #b99a58;
   --white: #f3f0e8;
   --muted: #aab5c2;
-  --line: rgba(213,179,106,.28);
+  --line: rgba(213,179,106,.25);
 }
-
 * { box-sizing: border-box; }
-
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
   background: var(--navy);
   color: var(--white);
   font-family: Georgia, "Times New Roman", serif;
-  line-height: 1.7;
+  line-height: 1.72;
 }
-
 a { color: var(--gold); text-decoration: none; }
 a:hover { color: #f1d99e; }
-
-.container {
-  width: min(1080px, 90%);
-  margin: auto;
-}
-
+.container { width: min(1080px, 90%); margin: auto; }
 nav {
-  padding: 24px 0;
+  padding: 22px 0;
   border-bottom: 1px solid var(--line);
   font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 1.5px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-
 nav a { margin-right: 25px; }
-
 .hero {
-  padding: 85px 0 70px;
+  padding: 76px 0 58px;
   border-bottom: 1px solid var(--line);
 }
-
-.eyebrow {
-  color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-h1 {
-  max-width: 850px;
-  margin: 22px 0;
-  font-size: clamp(36px, 6vw, 65px);
-  line-height: 1.12;
-  font-weight: normal;
-  letter-spacing: -1px;
-}
-
-.subtitle {
-  color: var(--muted);
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.hero-tags {
-  margin-top: 28px;
+.eyebrow, .kicker {
   color: var(--gold);
   font-family: Arial, sans-serif;
   font-size: 11px;
-  line-height: 2;
-  letter-spacing: 1.5px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
 }
-
-.result-panel {
-  margin: 55px 0;
-  padding: 38px 30px;
-  border: 1px solid var(--gold-soft);
-  background: linear-gradient(120deg, #10243b, #0a192b);
-  text-align: center;
+h1 {
+  max-width: 900px;
+  margin: 20px 0;
+  font-size: clamp(36px, 6vw, 64px);
+  line-height: 1.1;
+  font-weight: normal;
+  letter-spacing: -.8px;
 }
-
-.result-number {
+.subtitle {
+  max-width: 760px;
+  color: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: .5px;
+}
+.hero-tags {
+  margin-top: 25px;
   color: var(--gold);
   font-family: Arial, sans-serif;
-  font-size: clamp(58px, 10vw, 100px);
-  line-height: 1;
-  font-weight: bold;
-  letter-spacing: -4px;
-}
-
-.result-label {
-  margin-top: 15px;
-  color: var(--white);
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  letter-spacing: 3px;
+  font-size: 10px;
+  line-height: 2.1;
+  letter-spacing: 1.35px;
   text-transform: uppercase;
 }
-
-section {
-  padding: 42px 0;
-  border-bottom: 1px solid var(--line);
-}
-
+section { padding: 40px 0; border-bottom: 1px solid var(--line); }
 h2 {
   margin: 0 0 22px;
   color: var(--gold);
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: normal;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   text-transform: uppercase;
 }
-
-p { margin: 0 0 17px; }
-
-ul {
-  margin: 15px 0;
-  padding-left: 22px;
+h3 {
+  margin: 24px 0 10px;
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-
-li { margin: 8px 0; }
-
+p { margin: 0 0 16px; }
+ul { margin: 12px 0 18px; padding-left: 22px; }
+li { margin: 7px 0; }
 li::marker { color: var(--gold); }
-
-.highlight {
-  color: var(--gold);
+strong, .highlight { color: var(--gold); }
+.lead {
+  max-width: 850px;
+  color: var(--white);
+  font-size: 19px;
+  line-height: 1.65;
 }
-
-.challenge-box {
-  margin-top: 25px;
-  padding: 25px;
+.note {
+  margin: 22px 0 0;
+  padding: 19px 22px;
   border-left: 2px solid var(--gold);
   background: rgba(255,255,255,.035);
+  color: var(--muted);
 }
-
-.approach-grid {
+.specs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-  margin-top: 25px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 34px;
+  margin-top: 20px;
 }
-
-.approach-card {
-  padding: 24px;
+.spec {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.spec span:first-child { color: var(--muted); }
+.spec span:last-child { text-align: right; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 22px;
+}
+.card {
+  padding: 22px;
   border: 1px solid var(--line);
   background: rgba(255,255,255,.025);
 }
-
-.approach-card h3 {
-  margin: 0 0 12px;
-  color: var(--gold);
-  font-family: Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.approach-card p { margin: 0; }
-
-.capabilities {
+.card h3 { margin-top: 0; color: var(--gold); }
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+.timeline { margin-top: 20px; }
+.step {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px 35px;
-  margin-top: 20px;
-}
-
-.capability {
-  padding: 15px 0;
+  grid-template-columns: 175px 1fr;
+  gap: 22px;
+  padding: 17px 0;
   border-bottom: 1px solid var(--line);
 }
-
-.capability strong {
-  display: block;
+.step-label {
   color: var(--gold);
   font-family: Arial, sans-serif;
-  font-size: 13px;
-  font-weight: normal;
+  font-size: 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-
-.capability span {
-  display: block;
-  margin-top: 6px;
-  color: var(--muted);
-  font-size: 14px;
+.result {
+  margin: 30px 0 0;
+  padding: 28px;
+  border: 1px solid var(--gold-soft);
+  background: linear-gradient(120deg, #10243b, #0a192b);
 }
-
+.result p:last-child { margin-bottom: 0; }
 blockquote {
   margin: 25px 0 0;
-  padding: 8px 0 8px 25px;
+  padding: 8px 0 8px 24px;
   border-left: 2px solid var(--gold);
-  color: var(--white);
-  font-size: 21px;
+  font-size: 20px;
   font-style: italic;
   line-height: 1.6;
 }
-
-.signature {
-  padding: 45px 0 55px;
-}
-
-.signature-name {
-  color: var(--gold);
-  font-size: 22px;
-}
-
+.signature { padding: 40px 0 50px; }
+.signature-name { color: var(--gold); font-size: 21px; }
 .signature-role {
-  margin-top: 8px;
+  margin-top: 7px;
   color: var(--muted);
   font-family: Arial, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 1px;
 }
-
 .disclaimer {
-  margin-top: 28px;
-  padding-top: 20px;
+  margin-top: 26px;
+  padding-top: 18px;
   border-top: 1px solid var(--line);
   color: #8794a3;
   font-family: Arial, sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.7;
 }
-
 footer {
-  padding: 25px 0;
+  padding: 23px 0;
   border-top: 1px solid var(--line);
   color: #8492a2;
   font-family: Arial, sans-serif;
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 1px;
   text-align: center;
 }
-
-@media (max-width: 650px) {
-  .approach-grid, .capabilities {
-    grid-template-columns: 1fr;
-  }
-  .hero { padding: 55px 0 45px; }
-  nav a { display: inline-block; margin: 5px 15px 5px 0; }
-  .result-panel { padding: 30px 15px; }
+@media (max-width: 680px) {
+  .specs, .cards { grid-template-columns: 1fr; }
+  .step { grid-template-columns: 1fr; gap: 5px; }
+  .hero { padding: 52px 0 42px; }
+  nav a { display: inline-block; margin: 5px 14px 5px 0; }
 }
 </style>
 </head>
 
 <body>
-
 <div class="container">
 
 <nav>
@@ -271,214 +214,523 @@ footer {
 </nav>
 
 <header class="hero">
-  <div class="eyebrow">Professional Case Study · Asset Recovery</div>
-  <h1>FROM DECOMMISSIONING<br>TO 12 MORE YEARS<br>OF SERVICE</h1>
-  <div class="subtitle">Restoring an ageing port asset under severe resource constraints</div>
+  <div class="eyebrow">Case 001 · Marine Asset Recovery</div>
+
+  <h1>RESTORING A 1972 PORT TUG TO OPERATIONAL SERVICE</h1>
+
+  <div class="subtitle">
+    The recovery of “100 Years of Krasnovodsk” — an initiative led by
+    the Chief Engineer, combining practical machinery restoration,
+    team mobilisation and resource coordination.
+  </div>
+
   <div class="hero-tags">
-    Technical Leadership &nbsp;·&nbsp;
-    Crew Mobilisation &nbsp;·&nbsp;
-    Operational Continuity
+    Chief Engineer &nbsp;·&nbsp; Recovery Initiative &nbsp;·&nbsp;
+    Engine-Room Teamwork &nbsp;·&nbsp; Machinery Restoration
   </div>
 </header>
 
-<div class="result-panel">
-  <div class="result-number">12 YEARS</div>
-  <div class="result-label">Additional Service After Restoration</div>
-</div>
-
 <section>
-  <h2>01 — The Situation</h2>
-  <p>
-    A port tug built in 1972 had become immobilised and was being
-    considered for decommissioning.
-  </p>
-  <p>The vessel performed two important functions for the port:</p>
-  <ul>
-    <li>Ship manoeuvring and assistance during vessel handling.</li>
-    <li>Supplying fuel and water to visiting vessels.</li>
-  </ul>
-  <p>
-    Its continued operation therefore had direct operational and
-    commercial value.
-  </p>
-  <p>However, several critical systems were out of service:</p>
-  <ul>
-    <li>Main engines</li>
-    <li>Auxiliary engines</li>
-    <li>Air compressor</li>
-    <li>Fire pump</li>
-    <li>Ballast pump</li>
-  </ul>
-  <p>
-    The situation was further complicated by low crew morale.
-    Personnel were receiving only half their salaries and expected
-    the vessel to be taken out of service.
-  </p>
-</section>
+  <h2>01 — The Asset</h2>
 
-<section>
-  <h2>02 — The Challenge</h2>
-  <p>
-    The task was not simply to repair individual pieces of machinery.
+  <p class="lead">
+    A port tug built in 1972, known as
+    <em>“100 Years of Krasnovodsk”</em>, had become immobilised and was
+    being considered for decommissioning. The stated position was that
+    restoration was technically impossible and economically unjustifiable.
   </p>
-  <div class="challenge-box">
-    The wider challenge was to restore the vessel as an operational
-    asset under severe resource constraints, while rebuilding the
-    team's confidence and willingness to work towards a common objective.
+
+  <p>
+    The tug performed two important functions for the port: assisting
+    with vessel manoeuvring and supplying water and fuel to visiting
+    vessels. Its continued operation therefore had direct operational
+    and commercial value.
+  </p>
+
+  <p>
+    Rather than accept decommissioning as the only option, I initiated
+    an effort to restore the vessel and return it to operational service.
+  </p>
+
+  <h3>Vessel Particulars</h3>
+
+  <div class="specs">
+    <div class="spec"><span>Year built</span><span>1972</span></div>
+    <div class="spec"><span>Length overall</span><span>28.20 m</span></div>
+    <div class="spec"><span>Length between perpendiculars</span><span>26.00 m</span></div>
+    <div class="spec"><span>Moulded breadth</span><span>7.00 m</span></div>
+    <div class="spec"><span>Moulded depth</span><span>3.70 m</span></div>
+    <div class="spec"><span>Mean loaded draught</span><span>2.75 m</span></div>
+    <div class="spec"><span>Maximum displacement</span><span>245 t</span></div>
+    <div class="spec"><span>Gross tonnage</span><span>137 GT</span></div>
+    <div class="spec"><span>Endurance</span><span>50 hours</span></div>
+    <div class="spec"><span>Main propulsion</span><span>2 × 300 hp</span></div>
+    <div class="spec"><span>Main engine model</span><span>6ChRP 25/34-1</span></div>
+    <div class="spec"><span>Auxiliary generator engines</span><span>6Ch12/14</span></div>
   </div>
-  <p style="margin-top:22px">
-    The crew needed coordination, a realistic recovery direction and
-    access to spare parts that were difficult to obtain.
+</section>
+
+<section>
+  <h2>02 — Initial Technical Condition</h2>
+
+  <p>
+    The tug had several critical systems out of service. Both main
+    engines were immobilised, only one of the two auxiliary diesel
+    generators was operational, and the air compressor was not
+    serviceable. The fuel oil separator was contaminated and incomplete,
+    with several disc-stack plates missing.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Main Propulsion</h3>
+      <p>
+        Both main engines required substantial work, including piston
+        and piston-ring replacement, fuel-injection repairs and work
+        on cylinder-head components and cooling systems.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Auxiliary Power</h3>
+      <p>
+        One auxiliary diesel-generator set was not operational and
+        required restoration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Starting Air and Compressor</h3>
+      <p>
+        The air compressor required replacement. The starting-air
+        receivers and their valves also needed attention.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Fuel Treatment</h3>
+      <p>
+        The fuel oil separator was contaminated and missing several
+        disc-stack plates. A leaking valve was also identified on
+        its suction line.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Auxiliary Machinery</h3>
+      <p>
+        The ballast pump and fire pump required repair before the
+        vessel could regain its operational capability.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Operational Context</h3>
+      <p>
+        The vessel's future was uncertain. Its recovery required
+        coordinated work across several machinery systems and
+        practical solutions for obtaining scarce components.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>03 — Main Engine Restoration</h2>
+
+  <p>
+    Both main engines were restored through coordinated work by
+    the engine-room team under my direction as Chief Engineer.
+    The work included:
+  </p>
+
+  <ul>
+    <li>Replacing pistons and piston rings on both engines.</li>
+    <li>Removing cylinder heads, lapping valve seats and replacing defective valves where required.</li>
+    <li>Replacing fuel injectors and sections of high-pressure fuel piping.</li>
+    <li>Manufacturing replacement textolite gaskets from available sheet material.</li>
+    <li>Addressing the damaged seawater cooling pump on the starboard engine.</li>
+    <li>Cleaning the port engine heat exchanger.</li>
+    <li>Replacing engine filters and renewing lubricating oil.</li>
+  </ul>
+
+  <div class="note">
+    Pistons and piston rings required for the repairs were located
+    in the spare-parts stock of a decommissioned vessel operated
+    by another organisation.
+  </div>
+
+  <p style="margin-top:20px">
+    The reduction gears and propeller shafts were found to be in
+    working condition and remained serviceable.
   </p>
 </section>
 
 <section>
-  <h2>03 — The Approach</h2>
+  <h2>04 — Auxiliary Diesel Generator Restoration</h2>
+
   <p>
-    As Senior Mechanic, I brought the crew together around a shared
-    objective: restoring the vessel and protecting its future.
-  </p>
-  <p>
-    I emphasised that the crew's collective effort would determine
-    both the vessel's future and their own professional and financial
-    prospects.
+    One of the two auxiliary diesel-generator sets, model 6Ch12/14,
+    required restoration. The work included:
   </p>
 
-  <div class="approach-grid">
-    <div class="approach-card">
+  <ul>
+    <li>Replacing cylinder-head gaskets.</li>
+    <li>Reconstructing a serviceable high-pressure fuel injection pump using components from two unserviceable pumps.</li>
+    <li>Replacing injector nozzles.</li>
+    <li>Lapping injector needle valves, pressure-testing the injectors and installing them.</li>
+    <li>Replacing fuel and lubricating-oil filters.</li>
+    <li>Cleaning the oil centrifuge.</li>
+    <li>Adjusting fuel injection timing.</li>
+  </ul>
+
+  <p>
+    The restored diesel generator was started successfully and
+    subsequently tested as part of the vessel's machinery recovery.
+  </p>
+</section>
+
+<section>
+  <h2>05 — Starting Air System and Compressor</h2>
+
+  <p>
+    The vessel's air compressor was replaced and started. Its
+    operation was satisfactory.
+  </p>
+
+  <p>
+    The vessel was equipped with four starting-air receivers,
+    each rated at 30 atmospheres, supplying compressed air for
+    starting both the main and auxiliary engines.
+  </p>
+
+  <p>
+    The valve sealing elements on all four receivers were replaced.
+    Following the work, each receiver was checked for air leakage
+    using a soap-solution test.
+  </p>
+
+  <div class="note">
+    No air leakage was detected. All four starting-air receivers
+    passed the check.
+  </div>
+</section>
+
+<section>
+  <h2>06 — Ballast and Fire Pump Restoration</h2>
+
+  <h3>Ballast Pump</h3>
+
+  <p>
+    The ballast pump was restored following replacement of its impeller.
+  </p>
+
+  <h3>Fire Pump</h3>
+
+  <p>
+    The fire pump was repaired. The work included replacement of
+    the shaft seal, spring, impeller and valve on the discharge line.
+  </p>
+
+  <p>
+    Both pumps were tested after the repairs and demonstrated
+    normal operation.
+  </p>
+</section>
+
+<section>
+  <h2>07 — Fuel Oil Separator Recovery</h2>
+
+  <p>
+    The fuel oil separator was found contaminated and missing
+    several disc-stack plates. I located the missing plates
+    aboard a foreign vessel that had arrived in port.
+  </p>
+
+  <p>
+    I negotiated an exchange with that vessel's Chief Engineer:
+    the missing separator plates in return for an unused spare
+    fuel-injector nozzle.
+  </p>
+
+  <p>
+    The leaking valve on the separator suction line was also replaced.
+    The separator was fully reassembled and tested successfully.
+  </p>
+</section>
+
+<section>
+  <h2>08 — Recovery Initiative, Team Mobilisation and Resource Coordination</h2>
+
+  <p>
+    The initiative to restore the tug was mine. I did not accept
+    that decommissioning was the only option. I believed that the
+    vessel's operational capability could be recovered through
+    coordinated technical work, practical resourcefulness and
+    the commitment of the engine-room team.
+  </p>
+
+  <p>
+    As Chief Engineer, I personally took responsibility for
+    mobilising the team around this objective. Bringing the crew
+    together, establishing a common purpose and motivating them
+    to undertake the restoration were central parts of my initiative.
+  </p>
+
+  <p>
+    I personally led the search for spare parts and, in most cases,
+    dealt directly with other organisations to obtain serviceable
+    components from worn-out, withdrawn or decommissioned vessels.
+    This involved identifying what could still be used and finding
+    practical ways to obtain the components required.
+  </p>
+
+  <p>
+    The restoration itself was a collective effort. The engine-room
+    team carried out the technical work. I directed and coordinated
+    the recovery activities and also took an active part in the repairs.
+  </p>
+
+  <div class="note">
+    My contribution combined the original recovery initiative,
+    personal mobilisation of the team, technical direction,
+    resource acquisition and direct participation in the work.
+  </div>
+</section>
+
+<section>
+  <h2>09 — Testing and Operational Verification</h2>
+
+  <p>
+    The restored and repaired machinery was tested. All mechanisms
+    underwent testing and demonstrated normal operation.
+  </p>
+
+  <p>
+    The fuel oil separator was fully assembled and tested successfully.
+    The starting-air receivers were separately checked for leakage
+    using a soap-solution test, with no leakage detected.
+  </p>
+
+  <p>
+    The restored auxiliary generator was started successfully.
+    The compressor, ballast pump and fire pump also demonstrated
+    satisfactory or normal operation following their respective repairs.
+  </p>
+</section>
+
+<section>
+  <h2>10 — Sea Trials, Docking and Register Inspection</h2>
+
+  <div class="timeline">
+
+    <div class="step">
+      <div class="step-label">Machinery readiness</div>
+      <div>
+        After completion and testing of the machinery work, I reported
+        to the Captain that the tug was ready for sea trials.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">Management notification</div>
+      <div>
+        The Captain went to the Port Fleet office and informed the
+        Head of the Port Fleet that the vessel was ready for sea trials.
+        The Head was astonished because he had previously been told
+        that restoration was technically impossible and economically
+        unjustifiable.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">Sea trials</div>
+      <div>
+        The tug performed very well during sea trials. The vessel
+        demonstrated that its restored machinery could support
+        its operational functions.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">Dry-docking</div>
+      <div>
+        The next stage was dry-docking, hull inspection and painting.
+        The Captain was responsible for the docking operation.
+        During this period, the engines and engine room were cleaned
+        and painted. I paid particular attention to the propellers;
+        their condition was satisfactory.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">Register inspection</div>
+      <div>
+        The vessel was presented to the Register and passed the
+        required inspection. It received permission to continue
+        operating. Its existing technical and operational
+        documentation remained unchanged.
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-label">Return to service</div>
+      <div>
+        The tug returned to its port duties. I continued working
+        aboard the vessel after its restoration.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>11 — Formal Retention and Operational Outcome</h2>
+
+  <p>
+    Following the vessel's presentation to the Register, port
+    management placed the tug on the Port Fleet's balance sheet.
+    The vessel was formally retained as a Port Fleet asset rather
+    than being decommissioned.
+  </p>
+
+  <p>
+    The restored tug resumed its two principal port functions:
+    assisting with vessel manoeuvring and supplying water and fuel
+    to visiting vessels. Its return to service restored an important
+    source of operational capacity for the port.
+  </p>
+
+  <p>
+    The crew retained their jobs, and full salaries were restored.
+    The outcome therefore extended beyond the machinery itself:
+    the vessel returned to productive use and the people working
+    aboard her retained their employment.
+  </p>
+
+  <div class="result">
+    <p><strong>Subsequent service — reported information</strong></p>
+    <p>
+      According to information I received after leaving the
+      organisation, the tug remained in operation for approximately
+      12 years or possibly longer after the restoration. I cannot
+      independently verify its complete subsequent service history
+      or the exact duration.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>12 — Professional Contribution</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Recovery Initiative</h3>
+      <p>
+        Initiated the effort to restore a vessel that had been
+        considered for decommissioning.
+      </p>
+    </div>
+
+    <div class="card">
       <h3>Team Mobilisation</h3>
       <p>
-        Re-established a shared sense of responsibility and coordinated
-        the crew around the restoration objective.
+        Personally brought the engine-room team together around
+        the recovery objective and motivated the collective effort.
       </p>
     </div>
 
-    <div class="approach-card">
-      <h3>Technical Recovery Coordination</h3>
+    <div class="card">
+      <h3>Marine Engineering</h3>
       <p>
-        Organised the work required to address failures affecting the
-        vessel's main and auxiliary machinery and essential support systems.
+        Directed and participated in the restoration of propulsion,
+        auxiliary power, starting air and other machinery systems.
       </p>
     </div>
 
-    <div class="approach-card">
-      <h3>Resourcefulness Under Constraints</h3>
+    <div class="card">
+      <h3>Resource Coordination</h3>
       <p>
-        Used professional contacts and established relationships to
-        locate scarce spare parts. Some components were recovered
-        from decommissioned vessels.
+        Personally led the search for scarce spare parts and
+        negotiated with other organisations to obtain usable components.
       </p>
     </div>
 
-    <div class="approach-card">
-      <h3>Operational Readiness</h3>
+    <div class="card">
+      <h3>Technical Direction</h3>
       <p>
-        Focused on restoring the vessel's ability to perform its intended
-        port duties, rather than treating individual repairs as isolated
-        achievements.
+        Coordinated the work across multiple machinery systems
+        and maintained focus on restoring the complete vessel.
       </p>
     </div>
+
+    <div class="card">
+      <h3>Operational Recovery</h3>
+      <p>
+        Helped return an immobilised port tug to service,
+        preserving its operational function and the crew's jobs.
+      </p>
+    </div>
+
   </div>
-</section>
 
-<section>
-  <h2>04 — Verification & Return to Service</h2>
-  <p>
-    After the restoration work, I declared the tug ready for operation
-    and proposed that it be retained on the port's balance sheet.
-  </p>
-  <p>Management initially viewed the proposal with scepticism.</p>
-  <p>
-    Sea trials subsequently demonstrated that the vessel was operational.
-    It was retained on the port's balance sheet and returned to service.
-  </p>
-</section>
-
-<section>
-  <h2>05 — The Result</h2>
-  <p>
-    The tug continued operating for another
-    <strong class="highlight">12 years</strong> after its restoration.
-  </p>
-  <p>
-    During this period, it continued performing ship manoeuvring and
-    fuel and water supply duties for the port.
-  </p>
-  <p>
-    The result was not merely the recovery of machinery. It was the
-    restoration of a productive port asset and the continuation of
-    its operational and commercial contribution.
-  </p>
-</section>
-
-<section>
-  <h2>06 — What This Experience Demonstrates</h2>
-
-  <div class="capabilities">
-    <div class="capability">
-      <strong>Asset Recovery</strong>
-      <span>Restoring operational capability in an ageing asset.</span>
-    </div>
-
-    <div class="capability">
-      <strong>Technical Coordination</strong>
-      <span>Addressing failures across multiple critical systems.</span>
-    </div>
-
-    <div class="capability">
-      <strong>Leadership Under Pressure</strong>
-      <span>Mobilising a team facing uncertainty and low morale.</span>
-    </div>
-
-    <div class="capability">
-      <strong>Resourcefulness</strong>
-      <span>Securing scarce components through professional networks and alternative sources.</span>
-    </div>
-
-    <div class="capability">
-      <strong>Operational Judgement</strong>
-      <span>Focusing on the readiness and actual function of the whole vessel.</span>
-    </div>
-
-    <div class="capability">
-      <strong>Long-Term Value</strong>
-      <span>Returning an asset to service for a further 12 years.</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <h2>07 — Professional Perspective</h2>
-  <p>
-    The central lesson is that an asset's condition cannot always be
-    judged solely by its current operational state.
-  </p>
-  <p>
-    A vessel that appears to have reached the end of its service life
-    may still have recoverable value when technical problems, resources,
-    people and operational priorities are addressed together.
-  </p>
   <blockquote>
-    Effective operational leadership requires more than identifying
-    what has failed. It requires organising the conditions under which
-    recovery becomes possible.
+    The recovery of an asset is not complete when individual
+    machines are repaired. It is complete when the vessel can
+    perform its intended function again — and that capability
+    has been tested.
   </blockquote>
 </section>
 
+<section>
+  <h2>13 — Professional Perspective</h2>
+
+  <p class="lead">
+    This case demonstrates that the recovery of an ageing marine
+    asset is not solely a matter of replacing machinery.
+  </p>
+
+  <p>
+    It requires an initiative, a clear operational objective,
+    technical judgement, resourcefulness and the ability to bring
+    people together around a difficult task.
+  </p>
+
+  <p>
+    The restoration of this tug was achieved through the combined
+    effort of the engine-room team. My role was to initiate that
+    effort, mobilise the team, direct the recovery, secure the
+    necessary resources and take part in the practical work.
+  </p>
+
+  <p>
+    The final result was not simply a collection of repaired
+    machines. It was the return of a working port vessel to
+    operational service.
+  </p>
+</section>
+
 <div class="signature">
+
   <div class="signature-name">Yeruslan Chihachyov</div>
+
   <div class="signature-role">
-    Marine & Offshore Operations · Operational Reliability · Asset Recovery
+    Chief Engineer · Marine Engineering · Offshore Operations · Asset Recovery
   </div>
-  <p style="margin-top:18px;color:var(--gold);font-style:italic">
-    Practical experience. Technical judgement. Responsibility for results.
+
+  <p style="margin-top:16px;color:var(--gold);font-style:italic">
+    Initiative. Technical judgement. Team mobilisation. Operational recovery.
   </p>
 
   <div class="disclaimer">
     CASE STATUS: Professional experience account based on personal
-    recollection. No independently audited financial figures or formal
-    engineering assessment are claimed.
+    recollection. Technical particulars and work descriptions are
+    presented as recalled by the author. No independent engineering
+    audit or financial valuation is claimed. The reported post-departure
+    service period is explicitly unverified.
   </div>
+
 </div>
 
 <footer>
