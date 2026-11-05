@@ -17,8 +17,15 @@
   --muted: #aab5c2;
   --line: rgba(213,179,106,.25);
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--navy);
@@ -26,9 +33,21 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   line-height: 1.72;
 }
-a { color: var(--gold); text-decoration: none; }
-a:hover { color: #f1d99e; }
-.container { width: min(1080px, 90%); margin: auto; }
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f1d99e;
+}
+
+.container {
+  width: min(1080px, 90%);
+  margin: auto;
+}
+
 nav {
   padding: 22px 0;
   border-bottom: 1px solid var(--line);
@@ -37,18 +56,25 @@ nav {
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
-nav a { margin-right: 25px; }
+
+nav a {
+  margin-right: 25px;
+}
+
 .hero {
   padding: 76px 0 58px;
   border-bottom: 1px solid var(--line);
 }
-.eyebrow, .kicker {
+
+.eyebrow,
+.kicker {
   color: var(--gold);
   font-family: Arial, sans-serif;
   font-size: 11px;
   letter-spacing: 2.5px;
   text-transform: uppercase;
 }
+
 h1 {
   max-width: 900px;
   margin: 20px 0;
@@ -57,6 +83,7 @@ h1 {
   font-weight: normal;
   letter-spacing: -.8px;
 }
+
 .subtitle {
   max-width: 760px;
   color: var(--muted);
@@ -64,6 +91,7 @@ h1 {
   font-size: 14px;
   letter-spacing: .5px;
 }
+
 .hero-tags {
   margin-top: 25px;
   color: var(--gold);
@@ -73,7 +101,12 @@ h1 {
   letter-spacing: 1.35px;
   text-transform: uppercase;
 }
-section { padding: 40px 0; border-bottom: 1px solid var(--line); }
+
+section {
+  padding: 40px 0;
+  border-bottom: 1px solid var(--line);
+}
+
 h2 {
   margin: 0 0 22px;
   color: var(--gold);
@@ -83,6 +116,7 @@ h2 {
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
+
 h3 {
   margin: 24px 0 10px;
   color: var(--white);
@@ -92,17 +126,36 @@ h3 {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
-p { margin: 0 0 16px; }
-ul { margin: 12px 0 18px; padding-left: 22px; }
-li { margin: 7px 0; }
-li::marker { color: var(--gold); }
-strong, .highlight { color: var(--gold); }
+
+p {
+  margin: 0 0 16px;
+}
+
+ul {
+  margin: 12px 0 18px;
+  padding-left: 22px;
+}
+
+li {
+  margin: 7px 0;
+}
+
+li::marker {
+  color: var(--gold);
+}
+
+strong,
+.highlight {
+  color: var(--gold);
+}
+
 .lead {
   max-width: 850px;
   color: var(--white);
   font-size: 19px;
   line-height: 1.65;
 }
+
 .note {
   margin: 22px 0 0;
   padding: 19px 22px;
@@ -110,12 +163,14 @@ strong, .highlight { color: var(--gold); }
   background: rgba(255,255,255,.035);
   color: var(--muted);
 }
+
 .specs {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 34px;
   margin-top: 20px;
 }
+
 .spec {
   display: flex;
   justify-content: space-between;
@@ -124,22 +179,42 @@ strong, .highlight { color: var(--gold); }
   border-bottom: 1px solid var(--line);
   font-size: 14px;
 }
-.spec span:first-child { color: var(--muted); }
-.spec span:last-child { text-align: right; }
+
+.spec span:first-child {
+  color: var(--muted);
+}
+
+.spec span:last-child {
+  text-align: right;
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
   margin-top: 22px;
 }
+
 .card {
   padding: 22px;
   border: 1px solid var(--line);
   background: rgba(255,255,255,.025);
 }
-.card h3 { margin-top: 0; color: var(--gold); }
-.card p:last-child, .card ul:last-child { margin-bottom: 0; }
-.timeline { margin-top: 20px; }
+
+.card h3 {
+  margin-top: 0;
+  color: var(--gold);
+}
+
+.card p:last-child,
+.card ul:last-child {
+  margin-bottom: 0;
+}
+
+.timeline {
+  margin-top: 20px;
+}
+
 .step {
   display: grid;
   grid-template-columns: 175px 1fr;
@@ -147,6 +222,7 @@ strong, .highlight { color: var(--gold); }
   padding: 17px 0;
   border-bottom: 1px solid var(--line);
 }
+
 .step-label {
   color: var(--gold);
   font-family: Arial, sans-serif;
@@ -154,13 +230,18 @@ strong, .highlight { color: var(--gold); }
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 .result {
   margin: 30px 0 0;
   padding: 28px;
   border: 1px solid var(--gold-soft);
   background: linear-gradient(120deg, #10243b, #0a192b);
 }
-.result p:last-child { margin-bottom: 0; }
+
+.result p:last-child {
+  margin-bottom: 0;
+}
+
 blockquote {
   margin: 25px 0 0;
   padding: 8px 0 8px 24px;
@@ -169,8 +250,16 @@ blockquote {
   font-style: italic;
   line-height: 1.6;
 }
-.signature { padding: 40px 0 50px; }
-.signature-name { color: var(--gold); font-size: 21px; }
+
+.signature {
+  padding: 40px 0 50px;
+}
+
+.signature-name {
+  color: var(--gold);
+  font-size: 21px;
+}
+
 .signature-role {
   margin-top: 7px;
   color: var(--muted);
@@ -178,6 +267,7 @@ blockquote {
   font-size: 11px;
   letter-spacing: 1px;
 }
+
 .disclaimer {
   margin-top: 26px;
   padding-top: 18px;
@@ -187,6 +277,7 @@ blockquote {
   font-size: 10px;
   line-height: 1.7;
 }
+
 footer {
   padding: 23px 0;
   border-top: 1px solid var(--line);
@@ -196,16 +287,32 @@ footer {
   letter-spacing: 1px;
   text-align: center;
 }
+
 @media (max-width: 680px) {
-  .specs, .cards { grid-template-columns: 1fr; }
-  .step { grid-template-columns: 1fr; gap: 5px; }
-  .hero { padding: 52px 0 42px; }
-  nav a { display: inline-block; margin: 5px 14px 5px 0; }
+  .specs,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .hero {
+    padding: 52px 0 42px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px 14px 5px 0;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
 <nav>
@@ -214,6 +321,7 @@ footer {
 </nav>
 
 <header class="hero">
+
   <div class="eyebrow">Case 001 · Marine Asset Recovery</div>
 
   <h1>RESTORING A 1972 PORT TUG TO OPERATIONAL SERVICE</h1>
@@ -228,9 +336,11 @@ footer {
     Chief Engineer &nbsp;·&nbsp; Recovery Initiative &nbsp;·&nbsp;
     Engine-Room Teamwork &nbsp;·&nbsp; Machinery Restoration
   </div>
+
 </header>
 
 <section>
+
   <h2>01 — The Asset</h2>
 
   <p class="lead">
@@ -255,22 +365,73 @@ footer {
   <h3>Vessel Particulars</h3>
 
   <div class="specs">
-    <div class="spec"><span>Year built</span><span>1972</span></div>
-    <div class="spec"><span>Length overall</span><span>28.20 m</span></div>
-    <div class="spec"><span>Length between perpendiculars</span><span>26.00 m</span></div>
-    <div class="spec"><span>Moulded breadth</span><span>7.00 m</span></div>
-    <div class="spec"><span>Moulded depth</span><span>3.70 m</span></div>
-    <div class="spec"><span>Mean loaded draught</span><span>2.75 m</span></div>
-    <div class="spec"><span>Maximum displacement</span><span>245 t</span></div>
-    <div class="spec"><span>Gross tonnage</span><span>137 GT</span></div>
-    <div class="spec"><span>Endurance</span><span>50 hours</span></div>
-    <div class="spec"><span>Main propulsion</span><span>2 × 300 hp</span></div>
-    <div class="spec"><span>Main engine model</span><span>6ChRP 25/34-1</span></div>
-    <div class="spec"><span>Auxiliary generator engines</span><span>6Ch12/14</span></div>
+
+    <div class="spec">
+      <span>Year built</span>
+      <span>1972</span>
+    </div>
+
+    <div class="spec">
+      <span>Length overall</span>
+      <span>28.20 m</span>
+    </div>
+
+    <div class="spec">
+      <span>Length between perpendiculars</span>
+      <span>26.00 m</span>
+    </div>
+
+    <div class="spec">
+      <span>Moulded breadth</span>
+      <span>7.00 m</span>
+    </div>
+
+    <div class="spec">
+      <span>Moulded depth</span>
+      <span>3.70 m</span>
+    </div>
+
+    <div class="spec">
+      <span>Mean loaded draught</span>
+      <span>2.75 m</span>
+    </div>
+
+    <div class="spec">
+      <span>Maximum displacement</span>
+      <span>245 t</span>
+    </div>
+
+    <div class="spec">
+      <span>Gross tonnage</span>
+      <span>137 GT</span>
+    </div>
+
+    <div class="spec">
+      <span>Endurance</span>
+      <span>50 hours</span>
+    </div>
+
+    <div class="spec">
+      <span>Main propulsion</span>
+      <span>2 × 300 hp</span>
+    </div>
+
+    <div class="spec">
+      <span>Main engine model</span>
+      <span>6ChRP 25/34-1</span>
+    </div>
+
+    <div class="spec">
+      <span>Auxiliary generator engines</span>
+      <span>6Ch12/14</span>
+    </div>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>02 — Initial Technical Condition</h2>
 
   <p>
@@ -282,6 +443,7 @@ footer {
   </p>
 
   <div class="cards">
+
     <div class="card">
       <h3>Main Propulsion</h3>
       <p>
@@ -332,10 +494,13 @@ footer {
         practical solutions for obtaining scarce components.
       </p>
     </div>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>03 — Main Engine Restoration</h2>
 
   <p>
@@ -364,9 +529,11 @@ footer {
     The reduction gears and propeller shafts were found to be in
     working condition and remained serviceable.
   </p>
+
 </section>
 
 <section>
+
   <h2>04 — Auxiliary Diesel Generator Restoration</h2>
 
   <p>
@@ -388,9 +555,11 @@ footer {
     The restored diesel generator was started successfully and
     subsequently tested as part of the vessel's machinery recovery.
   </p>
+
 </section>
 
 <section>
+
   <h2>05 — Starting Air System and Compressor</h2>
 
   <p>
@@ -414,9 +583,11 @@ footer {
     No air leakage was detected. All four starting-air receivers
     passed the check.
   </div>
+
 </section>
 
 <section>
+
   <h2>06 — Ballast and Fire Pump Restoration</h2>
 
   <h3>Ballast Pump</h3>
@@ -436,9 +607,11 @@ footer {
     Both pumps were tested after the repairs and demonstrated
     normal operation.
   </p>
+
 </section>
 
 <section>
+
   <h2>07 — Fuel Oil Separator Recovery</h2>
 
   <p>
@@ -457,9 +630,11 @@ footer {
     The leaking valve on the separator suction line was also replaced.
     The separator was fully reassembled and tested successfully.
   </p>
+
 </section>
 
 <section>
+
   <h2>08 — Recovery Initiative, Team Mobilisation and Resource Coordination</h2>
 
   <p>
@@ -496,9 +671,11 @@ footer {
     personal mobilisation of the team, technical direction,
     resource acquisition and direct participation in the work.
   </div>
+
 </section>
 
 <section>
+
   <h2>09 — Testing and Operational Verification</h2>
 
   <p>
@@ -517,9 +694,11 @@ footer {
     The compressor, ballast pump and fire pump also demonstrated
     satisfactory or normal operation following their respective repairs.
   </p>
+
 </section>
 
 <section>
+
   <h2>10 — Sea Trials, Docking and Register Inspection</h2>
 
   <div class="timeline">
@@ -582,9 +761,11 @@ footer {
     </div>
 
   </div>
+
 </section>
 
 <section>
+
   <h2>11 — Formal Retention and Operational Outcome</h2>
 
   <p>
@@ -609,7 +790,9 @@ footer {
   </p>
 
   <div class="result">
+
     <p><strong>Subsequent service — reported information</strong></p>
+
     <p>
       According to information I received after leaving the
       organisation, the tug remained in operation for approximately
@@ -617,10 +800,13 @@ footer {
       independently verify its complete subsequent service history
       or the exact duration.
     </p>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>12 — Professional Contribution</h2>
 
   <div class="cards">
@@ -681,21 +867,39 @@ footer {
     perform its intended function again — and that capability
     has been tested.
   </blockquote>
+
 </section>
 
 <section>
+
   <h2>13 — Professional Perspective</h2>
 
- 13 — Professional Perspective
-
-This case demonstrates that restoring an ageing marine vessel to operational service requires more than simply repairing or replacing machinery.
-
-It requires initiative, a clear operational objective, technical judgement, resourcefulness and the ability to bring people together around a difficult task.
-
-The restoration of this tug was achieved through the combined effort of the engine-room team. My role was to initiate the effort, mobilise the team, direct the recovery process, secure the necessary resources and take an active part in the practical work.
-
-The final result was not simply a collection of repaired machines. It was the successful return of a working port vessel to operational service.
+  <p class="lead">
+    This case demonstrates that restoring an ageing marine vessel
+    to operational service requires more than simply repairing
+    or replacing machinery.
   </p>
+
+  <p>
+    It requires initiative, a clear operational objective,
+    technical judgement, resourcefulness and the ability to
+    bring people together around a difficult task.
+  </p>
+
+  <p>
+    The restoration of this tug was achieved through the combined
+    effort of the engine-room team. My role was to initiate the
+    effort, mobilise the team, direct the recovery process,
+    secure the necessary resources and take an active part
+    in the practical work.
+  </p>
+
+  <p>
+    The final result was not simply a collection of repaired
+    machines. It was the successful return of a working port
+    vessel to operational service.
+  </p>
+
 </section>
 
 <div class="signature">
@@ -725,5 +929,6 @@ The final result was not simply a collection of repaired machines. It was the su
 </footer>
 
 </div>
+
 </body>
 </html>
