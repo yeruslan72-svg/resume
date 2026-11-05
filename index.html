@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Yeruslan Chihachyov | Operational Reliability & Decision Architecture</title>
+
   <meta name="description" content="Yeruslan Chihachyov — 30+ years of marine, offshore, FSO/FPSO and production operations experience. Operational reliability, asset recovery and AVCS decision architecture.">
+
   <meta property="og:title" content="Yeruslan Chihachyov | Operational Reliability">
   <meta property="og:description" content="Operational experience. Structural thinking. Human-centred reliability.">
   <meta property="og:type" content="website">
@@ -20,7 +23,10 @@
       --line: rgba(198,164,92,.28);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: var(--navy);
@@ -28,20 +34,38 @@
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
     }
-    a { color: var(--gold); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .container { width: min(1080px, 90%); margin: auto; }
-    header { padding: 26px 0; border-bottom: 1px solid var(--line); }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    header {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
     .brand {
       color: var(--gold);
       font-size: 13px;
       letter-spacing: 3px;
       font-weight: bold;
     }
+
     .hero {
       padding: 105px 0 85px;
       border-bottom: 1px solid var(--line);
     }
+
     .hero-photo {
       float: right;
       width: 220px;
@@ -52,6 +76,7 @@
       padding: 5px;
       margin: 0 0 25px 40px;
     }
+
     .eyebrow {
       color: var(--gold);
       letter-spacing: 3px;
@@ -59,6 +84,7 @@
       font-weight: bold;
       text-transform: uppercase;
     }
+
     h1 {
       max-width: 850px;
       margin: 22px 0;
@@ -66,24 +92,31 @@
       line-height: 1.08;
       letter-spacing: -2px;
     }
-    h1 span { color: var(--gold); }
+
+    h1 span {
+      color: var(--gold);
+    }
+
     .subtitle {
       color: var(--muted);
       font-size: 18px;
       max-width: 760px;
     }
+
     .hero-meta {
       margin-top: 30px;
       color: var(--gold);
       font-size: 13px;
       letter-spacing: 1.5px;
     }
+
     .actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       margin-top: 35px;
     }
+
     .button {
       display: inline-block;
       padding: 12px 20px;
@@ -93,12 +126,17 @@
       letter-spacing: 1px;
       text-transform: uppercase;
     }
+
     .button.primary {
       background: var(--gold);
       color: var(--navy);
       font-weight: bold;
     }
-    section { padding: 70px 0; }
+
+    section {
+      padding: 70px 0;
+    }
+
     h2 {
       color: var(--gold);
       font-size: 13px;
@@ -106,39 +144,66 @@
       text-transform: uppercase;
       margin-bottom: 28px;
     }
-    h3 { font-size: 21px; margin: 0 0 12px; }
-    p { color: var(--muted); }
+
+    h3 {
+      font-size: 21px;
+      margin: 0 0 12px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .card {
       background: var(--navy-light);
       border: 1px solid var(--line);
       padding: 27px;
     }
-    .card p { font-size: 14px; }
+
+    .card p {
+      font-size: 14px;
+    }
+
     .number {
       color: var(--gold);
       font-size: 12px;
       letter-spacing: 2px;
       margin-bottom: 18px;
     }
+
     .case {
       border-left: 3px solid var(--gold);
       padding: 10px 0 10px 28px;
       max-width: 820px;
     }
+
+    .case p {
+      margin-bottom: 20px;
+    }
+
     .experience {
       border-top: 1px solid var(--line);
       padding: 20px 0;
       display: grid;
       grid-template-columns: 1fr 2fr;
       gap: 20px;
+      align-items: start;
     }
-    .experience strong { color: var(--white); }
-    .experience span { color: var(--muted); }
+
+    .experience strong {
+      color: var(--white);
+    }
+
+    .experience span {
+      color: var(--muted);
+    }
+
     .statement {
       background: var(--navy-light);
       border-top: 1px solid var(--gold);
@@ -148,21 +213,36 @@
       font-size: clamp(20px, 3vw, 29px);
       letter-spacing: .5px;
     }
-    .statement span { color: var(--gold); }
+
+    .statement span {
+      color: var(--gold);
+    }
+
+    .disclaimer {
+      font-size: 13px;
+      margin-top: 24px;
+      max-width: 800px;
+    }
+
     footer {
       border-top: 1px solid var(--line);
       padding: 35px 0;
       color: var(--muted);
       font-size: 13px;
     }
+
     .contact-links {
       display: flex;
       flex-wrap: wrap;
       gap: 24px;
       margin-top: 20px;
     }
+
     @media (max-width: 600px) {
-      .hero { padding: 70px 0; }
+      .hero {
+        padding: 70px 0;
+      }
+
       .hero-photo {
         float: none;
         display: block;
@@ -170,12 +250,21 @@
         height: 210px;
         margin: 0 auto 30px;
       }
-      .experience { grid-template-columns: 1fr; gap: 5px; }
+
+      .experience {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .contact-links {
+        gap: 16px 22px;
+      }
     }
   </style>
 </head>
 
 <body>
+
 <header>
   <div class="container brand">
     YERUSLAN CHIHACHYOV · PROFESSIONAL PROFILE
@@ -201,6 +290,7 @@
         Operational Reliability<br>
         <span>& Decision Architecture</span>
       </h1>
+
       <p class="subtitle">
         More than 30 years of practical experience in marine engineering,
         offshore operations, FSO/FPSO environments and operational
@@ -211,6 +301,7 @@
       <div class="hero-meta">
         30+ YEARS EXPERIENCE · OPERATIONAL LEADERSHIP · AVCS RESEARCH
       </div>
+
       <div class="actions">
         <a class="button primary"
            href="./portfolio/executive-value-profile.html">
@@ -227,9 +318,11 @@
 
   <section>
     <div class="container">
+
       <h2>Professional Focus</h2>
 
       <div class="grid">
+
         <div class="card">
           <div class="number">01 / OPERATIONS</div>
           <h3>Operational Experience</h3>
@@ -238,6 +331,7 @@
             operations, control-room coordination and technical operations.
           </p>
         </div>
+
         <div class="card">
           <div class="number">02 / RELIABILITY</div>
           <h3>Asset Recovery</h3>
@@ -247,6 +341,7 @@
             of operational capability.
           </p>
         </div>
+
         <div class="card">
           <div class="number">03 / AVCS</div>
           <h3>Decision Architecture</h3>
@@ -263,8 +358,11 @@
 
   <section>
     <div class="container">
+
       <h2>Selected Case Study</h2>
+
       <div class="case">
+
         <div class="eyebrow">
           Case 001 · Asset Recovery · Port Operations
         </div>
@@ -272,22 +370,31 @@
         <h3>Restoring a 1972 Port Tug to Operational Service</h3>
 
         <p>
-          Worked as Senior Mechanic with the engine-room team to restore
-          the port tug “100 Years of Krasnovodsk”. The recovery involved
-          both main engines, an auxiliary diesel generator and the fuel
-          oil separator. Following machinery restoration, successful sea
-          trials, dry-docking and Register inspection, the vessel received
-          permission to return to service.
+          As Chief Engineer, I initiated and coordinated the restoration
+          of the port tug “100 Years of Krasnovodsk”, working alongside
+          the engine-room team. The recovery involved both main engines,
+          auxiliary diesel-generator equipment, the starting air system,
+          pumps and the fuel oil separator.
         </p>
+
+        <p>
+          Following machinery restoration, successful sea trials and
+          dry-docking, the vessel was presented to the Register.
+          After inspection, port management placed it on the Port Fleet
+          balance sheet, and the Register authorised its continued operation.
+        </p>
+
         <a href="./portfolio/asset-recovery-case.html">
           Explore Case 001 →
         </a>
+
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
+
       <h2>Professional Experience</h2>
 
       <div class="experience">
@@ -299,6 +406,7 @@
         <strong>SBM Offshore</strong>
         <span>Pumpman · 2006–2009</span>
       </div>
+
       <div class="experience">
         <strong>Turkmen Maritime and River Lines</strong>
         <span>Progressive Marine Engineering Roles · 1993–2006</span>
@@ -315,9 +423,11 @@
 
   <section>
     <div class="container">
+
       <h2>AVCS — Independent Research & Development</h2>
 
       <h3>Adaptive Vector Control System</h3>
+
       <p>
         AVCS is a proprietary framework in development for examining
         the structural integrity of decision-making in high-risk
@@ -331,7 +441,11 @@
       </p>
 
       <div class="case">
-        <div class="eyebrow">Interactive Diagnostic Demonstration</div>
+
+        <div class="eyebrow">
+          Interactive Diagnostic Demonstration
+        </div>
+
         <h3>AVCS SIM LIGHT</h3>
 
         <p>
@@ -344,12 +458,15 @@
            rel="noopener noreferrer">
           Explore AVCS SIM LIGHT →
         </a>
+
       </div>
+
       <p class="disclaimer">
         The demonstration is a research and diagnostic interface.
         It does not constitute independent certification or
         validated operational assurance.
       </p>
+
     </div>
   </section>
 
@@ -361,16 +478,19 @@
     <strong>Yeruslan Chihachyov</strong>
 
     <div class="contact-links">
+
       <a href="mailto:yeruslan72@gmail.com">Email</a>
 
       <a href="https://www.linkedin.com/in/yeruslan-chihachyov-70a807126">
         LinkedIn
       </a>
+
       <a href="https://github.com/yeruslan72-svg/resume">
         GitHub
       </a>
 
       <a href="./cv.pdf">CV PDF</a>
+
     </div>
 
     <p>
